@@ -1,0 +1,116 @@
+
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+  <style>
+      #parent {
+    background-color: #eee;
+    height: 52px;
+    position:relative;
+    overflow:hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #DCDCD8;
+    border-radius:7px;
+    
+}
+#colLeft {
+    height: 52px;
+    float: left;
+    display: inline-block;
+    
+}
+#colCenter {
+    height: 52px;
+    display: inline-block;
+    float: left;
+    padding-left: 10px;
+    margin-top:0px;
+    overflow: hidden;
+        width: 60%;
+}
+#colCenter p {
+    margin-top: 0px;
+
+}
+#colRight {
+    height: 52px;
+    display: inline;
+    float: right;       
+    position:absolute;
+    top:0;
+    right:0;
+    
+}
+  </style>
+     <ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+<br>
+	<!--<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label style="right:50%">{{lg.get("home_opt6")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+		</center>
+	
+	</div>-->
+
+
+<div style="text-align: center" ng-controller="InterTopUpController" ng-init="listAccessNumbers()">
+
+ <ons-row>
+ 
+	
+     <ons-col align="center">
+     
+        
+   
+		<br />
+       <div class="DirectDialMainDiv">
+           
+            <p style="text-align:center;font-family: 'Ek Mukta', sans-serif;line-height:1;padding-top:10px;padding-right:10px;padding-left:10px;color:#555555;font-weight:bold;font-size:18px">
+         {{lg.get("lbl_addAccessNumber_sub")}}
+     	</p>      
+  
+		<br>
+           	<p>
+			
+
+         <select class="custom-dropdown-accessnumber" 
+		    ng-change="selectAccessNumberAction()"
+		    ng-model="myAccessNumber"
+		    ng-options="value.displayNumber for value in accessNumbers">
+		</select>
+	      	</p>
+       
+  
+         
+	
+        </ons-col>
+      </ons-row>  
+	  
+
+	  
+</div>
+
+<br />
+<span>
+        <ons-button ng-click="addAccessNbrToPhonebook()" style="width:45%;background:transparent;">
+            <img src="images/saveToContactBtn{{lg.get('lbl_lgTag')}}.png" alt="" style="width:80%">
+          </ons-button>
+
+        <ons-button ng-click="callAccessNumber(true)" style="width:45%;background:transparent;">
+            <img src="images/callBtn{{lg.get('lbl_lgTag')}}.png" alt="" style="width:80%">
+          </ons-button>
+          
+    </span>
+      
+      
+  </ons-page>

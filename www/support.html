@@ -1,0 +1,43 @@
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+ <br>
+	  <!-- <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("lbl_support")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+	   </center>
+	   </div>-->
+	   <div style="text-align: center">
+
+  
+	<center>
+	   
+	   <img style="width:100%;padding-bottom:10px;" src="images/support.jpg" alt=""/>
+	   
+	    <div class="welcomingTextMain">{{lg.get("lbl_haveQuestions")}}</div>
+	    <p>
+		<ons-button class="button-green-newsupport" style="width:96%;font-size:16px" modifier="normal"  onclick="window.open('http://www.ringvoz.com/nanorep-mobile/', '_system');">{{lg.get("lbl_visitHelpCenter")}}</ons-button>
+		</p>
+		
+	    <div class="welcomingTextMain">{{lg.get("lbl_callUsNow")}}</div>
+	   <div class="welcomingTextMain">+1(800) 340-7595</div>
+
+	  
+		</center>
+	
+	    </div>
+
+
+  </ons-page>

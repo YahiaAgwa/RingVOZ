@@ -1,0 +1,271 @@
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .isTablet {
+        display: inline-block;
+    }
+    .TopBlueBarTitle {
+        text-transform:normal;
+        width:100%;
+        border:0px solid white;
+        padding-left:0px;
+        text-align:center;
+        color:white;
+        margin-top:-8px;
+        height:55px;
+        background: #339dff;
+        background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+        background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+        background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+        background-image: -o-linear-gradient(top, #339dff, #1060bf);
+        background-image: linear-gradient(to bottom, #339dff, #1060bf);
+    }
+    #topBlueBarId {
+    	margin-top:-20px;
+		height:55px;
+	}
+	#topBlueBarLbl {
+		font-size: 18px;
+		top: 25%;
+	}
+	#topBlueBarLeftIcon {
+		width:12%;
+		padding-left:10px;
+		
+		margin-top:10px;
+	}
+	#topBlueBarRightIcon {
+		width:6%;
+		padding-right:10px;
+		margin-top:18px;
+	}
+    .TopBlueBarTitle img {
+        z-index:1000;
+    	
+    }
+    #tb {
+		height:55px;
+	}
+    #topOrangeBarImg {
+		padding-bottom:10px;
+		width:50%;
+	}
+    .TopBlueBarTitle label {
+    	text-align: center;
+        position: relative;
+        top: 10%;
+    	left:0%;
+     
+    }
+    
+    .TopBlueBarTitleTransacDetails {
+    text-transform:normal;
+    width:100%;
+    border:0px solid white;
+    padding-left:0px;
+    text-align:center;
+    height:55px;
+    vertical-align:middle;
+    color:white;
+    font-family: 'Ek Mukta', sans-serif;
+    background: #339dff;
+    background-image: -webkit-linear-gradient(top, #339dff, #1060bf) !important;
+    background-image: -moz-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: -ms-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: -o-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: linear-gradient(to bottom, #339dff, #1060bf)  !important;
+    }    
+    .topUpOptBtn {
+        height:70px;
+        width:80%;
+    	background-color: #f7f7f7;
+    	color: blue;
+    	font-weight:bold;
+    	font-size:15px;
+    	border:none;	
+    }
+    
+    .topUpOptBtnMenu {
+    	height:40px;
+    	width:100%;
+    	background-color: silver;
+    	color: blue;
+    	font-weight:bold;
+    	font-size:15px;
+    	top:1px;
+    }
+    .box-home-enable {
+      background: #ffffff;
+      background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+      background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );  
+        height: 80px;
+		margin-right: 8px; 
+		margin-left: 8px; 
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 80px;		
+      position: relative;
+      top: 0;
+      -webkit-transition: 1s all ease;
+      -moz-transition: 1s all ease;
+       transition: 1s all ease;
+      border-radius: 5px 5px 5px 5px;
+      border: 1px solid #BCBCBC;
+      width: 94%;
+      hyphens: none;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+      text-decoration:none;
+    }    
+    .box-home-content {
+	  margin-top:  15px; 
+	}	
+	.box-home-enable img {
+		width: 19%;
+		margin-top:  15px; 
+		margin-left: 15px;
+		margin-right: 5px;		
+	}
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 43px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }    
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 32px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+
+    .box-home-enable a {
+      text-decoration:none;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+
+	.tripplePayTitleDiv {
+		margin-top:5px;
+	}
+	.secureTransac {
+		font-size:9px;
+		width:96%;
+	}
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 20px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }        
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 13px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+
+	.custom-dropdown-country {
+		font-size:22px;
+	}
+	.custom-dropdown-operator {
+		font-size:22px;
+	}
+	.custom-dropdown-amount {
+		font-size:15px;
+	}
+	.custom-dropdown-cardmastercard {
+		font-size: 17px;
+	}
+	.custom-dropdown-cardamerexpress {
+		font-size: 17px;
+	}
+	.custom-dropdown-carddiscover {
+		font-size: 17px;
+	}
+	.custom-dropdown-cardslist {
+		font-size: 17px;
+	}	
+	.custom-dropdown-cardvisa {
+		font-size: 17px;	
+	}
+	.button-green-newsupport {
+		font-size: 16px;
+	}
+	.button-green-new {
+		font-size: 16px;
+	}
+	.button-green-new-rn {
+		font-size: 2px;
+	}
+	.button-blue-new {
+		font-size: 16px;
+	}
+	.button-orange-new {
+		font-size: 16px;
+	}	
+	.custom-dropdown-ccmonthyear {
+		font-size:16px;
+		padding-left: 7px;
+	}
+	.locatorTxt {
+		font-size: 12px;
+	}	
+	.tripplePayTitleTxt1 {
+		font-size: 13px;
+		padding-left:140px;
+	}
+	.tripplePayTitleTxt2 {
+		font-size: 13px;
+		padding-left:140px;
+	}	
+	.autoRechargeTxt1 {
+		font-size:15px;
+	}
+
+	.autoRechargeTxt2 {
+		font-size:10px;
+	}
+	.interTopUpTitleTxt {
+		font-size:12px;
+	}	
+	.rechargeCurrencyTxt {
+		margin-right:15px;
+		font-weight:bold;
+		color:#FB700A;
+		font-size:16px;
+	}
+	.ccAutoRechargeImg {
+		width:13%;
+	}    
+}

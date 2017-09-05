@@ -1,0 +1,36 @@
+  <ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="top:50%;width=100%">
+       
+     <div class="TopBlueBarTitleTransacDetails" style="margin-top:-20px">
+	  <p style="line-height:60px"><span><label style="padding-left:30px">{{lg.get("lbl_confirmRecharge")}}</label><img src="images/x_white_transparent.png" alt="" ng-controller="InterTopUpController" ng-click="closeDlg()" style="padding-right:10px;padding-top:20px;width:7%;float:right"></span></p>
+	  </div>
+
+ 
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_rechargeValue")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAmount()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>
+       <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_paymentMethod")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.paymentMethod()"></span>
+      </ons-list-item>
+       <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_paymentMethodCardNbr")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAccountCcDisplay()"></span>
+      </ons-list-item>  
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_taxes")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.regulatoryCharges()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>  
+     <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_totalValue")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAmountTotal()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>      
+     <ons-list-item>
+	 
+	<center>
+		<div>
+		
+		<label class="checkbox" style="float:left;font-weight:700"><input type="checkbox" checked="checked"><div class="checkbox__checkmark"></div></label>
+		</div><br>
+		
+		<label style="font-family: 'Ek Mukta', sans-serif;font-weight:700;font-size:13px;margin-top:-40px;padding-left:35px;float:left">{{lg.get("lbl_autoRechargeAmoutConfirm")}} ${{rechargeDetails.autoRechargeAmount()}} {{lg.get("lbl_activated")}}.</label>
+	</center>
+      <p>
+        <ons-button class="button-green-new" ng-click="rechargeAccountWithCc()" style="text-align:center;width:100%" modifier="normal">{{lg.get("btn_recharge")}}</ons-button>
+        </p>
+  </ons-dialog>

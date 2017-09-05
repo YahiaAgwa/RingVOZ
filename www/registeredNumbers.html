@@ -1,0 +1,16 @@
+
+   <ons-dialog var="dialog" cancelable ng-controller="TopUpController">
+	  <ons-toolbar inline>
+        <div class="center" style="color:white;background-color:#0096DB">
+          Numero Favoritos Registrados
+        </div>
+      </ons-toolbar>
+      
+	 <ons-list>
+        <ons-list-item ng-repeat="item in items2" modifier="tappable" ng-click="showSelectedPaymentMethod();">  
+            <center><label style="font-size:12px;padding-top:10px;">{{item.description}}</label></center>
+        </ons-list-item>
+    </ons-list>
+	
+	
+	  </ons-dialog> 

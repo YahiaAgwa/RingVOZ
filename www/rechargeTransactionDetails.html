@@ -1,0 +1,34 @@
+  <ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="top:50%;width=100%">
+       
+     <div class="TopBlueBarTitleTransacDetails" style="margin-top:-20px">
+	  <p style="line-height:60px"><span><label style="padding-left:30px">{{lg.get("lbl_confirmRecharge")}}</label><img src="images/x_white_transparent.png" alt="" ng-controller="InterTopUpController" ng-click="closeDlg()" style="padding-right:10px;padding-top:20px;width:7%;float:right"></span></p>
+	  <span></span>
+	  </div>
+
+ 
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_rechargeValue")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAmount()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_rechargechippromo")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeChipPromo()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>
+       <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_paymentMethod")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.paymentMethod()"></span>
+      </ons-list-item>
+       <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_paymentMethodCardNbr")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAccountCcDisplay()"></span>
+      </ons-list-item>
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_fee")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.fees()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>
+      <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_taxes")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.regulatoryCharges()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>  
+     <ons-list-item>
+        <label class="transactionDetailsLbl">{{lg.get("lbl_totalValue")}}:</label><span class="detailsTrans" ng-bind="rechargeDetails.rechargeAmountTotal()"></span><span class="detailsTrans">$</span>
+      </ons-list-item>      
+     <ons-list-item>
+      <p>
+        <ons-button class="button-green-new" ng-click="rechargeAccountWithCc()" style="text-align:center;width:100%" modifier="normal">{{lg.get("btn_recharge")}}</ons-button>
+        </p>
+  </ons-dialog>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  	<meta charset="utf-8">
+   	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="components/loader.js"></script>
+	<script src="lib/ringvoz/top_up.js"></script> 
+
+
+	<!-- script>
+	
+   
+
+
+   	function onDeviceReady() {
+
+	/*   document.addEventListener("backbutton", function(e){
+		   if($.mobile.activePage.is('#homepage')){
+			   e.preventDefault();
+			   navigator.app.exitApp();
+		   }
+		   else {
+			   navigator.app.backHistory();
+		   }
+		}, false);
+		*/
+   	}
+	
+	function onLoad() {
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+   </script -->
+   
+<style>
+
+  
+  
+  /*  Basic stucture
+=====================*/
+#accordion{margin:0px;width:100%;overflow:scroll;}
+#accordion ul{list-style:none;margin:0;padding:0;}
+.accordion{display:none;}
+.accordion:target{display:block;}
+#accordion ul li a{text-decoration:none;display:block;padding:10px;}
+.accordion{padding:4px;}
+
+/*  Colors 
+====================*/
+#accordion ul{
+/*box-shadow*/
+-webkit-box-shadow:0 4px 10px #BDBDBD;
+   -moz-box-shadow:0 4px 10px #BDBDBD;
+        box-shadow:0 4px 10px #BDBDBD;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+#accordion ul li a{
+background:#fff;
+border-bottom:1px solid #E0E0E0;
+color:#999;
+}
+.accordion{
+background:#fdfdfd;
+color:#999;
+}
+.accordion:target{
+border-top:3px solid #FFCDCD;
+}
+
+.styled-select {
+   width: 300px;
+   height: 24px;
+   overflow: hidden;
+   background-image: url('/images/dropdown.gif') no-repeat right #ddd;
+   border: 1px solid white;
+	background-color:white;
+
+   }
+</style>
+
+</head>
+<body ng-controller="InterTopUpController">   
+<ons-navigator title="Navigator" var="myNavigator">
+ 	 <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+    <ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+	<br>
+	   <!--<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <label id="topBlueBarLbl">{{lg.get("lbl_configuration")}}</label>
+	   </div>
+	  
+		</center>
+	
+	    </div>-->
+		
+  <div class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 
+    
+<p>
+<div class="box-home-enable" ng-click="displayAccountInfoSetup()">
+<a href="#">
+<img align="left" src="images/ico_recarga_top-up.png" alt="Recargas de celulares" width="17%"/>
+	<div class="box-home-content">
+	<h3>{{lg.get("settings_opt1")}}</h3>
+	<h4>{{lg.get("settings_opt1_sub")}}</h4>
+	</div>
+</a>
+</div>
+</p>
+
+<p>
+<div class="box-home-enable" ng-click="displayAccessNumberSetup()">
+<a href="#">
+<img align="left" src="images/accessNbrIcon.png" alt="Edit Access Number" width="17%"/>
+	<div class="box-home-content">
+	<h3>{{lg.get("settings_opt2")}}</h3>
+	<h4>{{lg.get("settings_opt2_sub")}}</h4>
+	</div>
+</a>
+</div>
+</p>
+
+</div>
+    </ons-page>
+</ons-navigator>
+</body>
+</html>	

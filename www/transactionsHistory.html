@@ -1,0 +1,78 @@
+<ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+   	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+<br>
+	<!--   <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <label id="topBlueBarLbl">{{lg.get("lbl_myAccountHistory")}}</label>
+	   </div>
+	  
+		</center>
+	
+	    </div>-->
+			<br>
+		
+<div style="text-align: center" ng-controller="InterTopUpController">
+	 <div class="MySettingsGrayBox">
+
+	<p>
+	<center><label style="color:#555555;font-weight:700">{{lg.get("lbl_transactionsHistory")}}</label></center>
+	</p>
+		<p>
+		<span>
+				<ons-button class="button-orange-new" style="padding-top:5px;width:45%" modifier="normal" ng-click="displayTopUps()">
+				  {{lg.get("btn_topUp")}}
+				</ons-button>
+				<ons-button class="button-blue-new" style="padding-top:5px;width:45%" modifier="normal" ng-click="getRechargesHistory()">
+				  {{lg.get("btn_funds")}}
+				</ons-button>
+				</span>
+			</p>
+			
+            
+            
+		<table style="width:98%;padding-left:10px;font-size:11px;border:1 solid black">
+			<thead>
+				<tr style="background-color:#f7f7f7">
+					<td style="width:30%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_date")}}</td>
+					<td style="width:30%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_desc")}}</td>
+					<td style="width:30%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_transAmount")}}</td>
+				</tr>
+			</thead> 
+			<tbody style="display:{{displayTopUpHistoryView}};border:0" ng-repeat="t in transactionsHistory">
+				<tr style="border:0"><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO1}}</td><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{lg.get("lbl_rechargeToNbr")}} {{t.INFO3}}</td><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">$ {{t.INFO5}} USD</td></tr>
+			</tbody>
+			<tbody style="display:{{displayRechargesHistoryView}};border:0" ng-repeat="t in rechargesHistory">
+				<tr ng-if="t.INFO3 > 0.05" style="border:0"><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO4}}</td><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO2}}</td><td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">$ {{t.INFO3}} USD</td></tr>
+			</tbody>			
+		</table>
+		
+</div>
+        
+  	<ons-row>
+		<ons-col align="center">
+			<br><br>
+			<p>
+				<ons-button class="button-orange-new" style="width:45%" modifier="normal" ng-click="goHome()">
+				  {{lg.get("btn_back")}}
+				</ons-button>
+			</p>
+  		</ons-col>
+	</ons-row>
+	  
+      <ons-row>
+      <br><br>
+      </ons-row>
+    
+
+</div>
+</ons-page>

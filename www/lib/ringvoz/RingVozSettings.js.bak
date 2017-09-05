@@ -1,0 +1,109 @@
+var module = angular.module('app', ['onsen']);
+var _email = localStorage.email;
+
+var _verifiedPhoneNumber = localStorage.verifiedNumber;
+var _accountBalance = localStorage.accountBalance;
+
+function setUserEmail() {
+	//alert('Email registered!');
+    localStorage.email = _email;
+}
+
+app.controller('EmailRegistrationController', function($scope,$http) {
+	$scope.closeDlg = function() {
+		dialog.hide();
+	}
+	/*
+	$scope.show = function(dlg) {
+	    ons.createDialog(dlg).then(function(dialog) {
+	      dialog.show();
+	    });
+	}
+*/	
+	$scope.userSettings = {
+		    email: function(newEmail) {
+		    	if (angular.isDefined(newEmail)) {
+		    		_email = newEmail;
+		    		localStorage.email = newEmail;
+		    	}
+		    	return _email;
+		    },
+		    verifiedPhoneNumber: function() {
+		    	return _verifiedPhoneNumber;	    	
+		    },
+		    accountBalance: function() {
+		    	return '$' + _accountBalance;	    	
+		    }
+		};
+	
+	$scope.updateAccountEmail = function(redirectTo) {
+		setUserEmail();
+		dialog.hide();
+		
+		$http.post('https://mobileapp.ringvoz.com/personalinfo?user=RingVozApp&pass=t3l0nlin3', {refid: localStorage.refId, email: localStorage.email}).
+		  success(function(data, status, headers, config) {
+			if (data.response.DATA.INFO1 == 'Update Ok ') {
+				if (redirectTo != undefined && redirectTo != '') {
+					document.location = redirectTo;
+				}
+			} else {
+				//$scope.show("accountUpdateError.html");
+			}
+		  }).
+		  error(function(data, status, headers, config) {
+			//  $scope.show("accountUpdateError.html");
+		  });
+
+ 	};
+});
+
+
+
+
+app.controller('DialogController', function($scope) {
+  
+  $scope.next = function() {
+   
+    ons.createDialog('dialog2.html').then(function(dialog) {
+	      dialog.show();
+	    });
+	  
+	  }
+	  
+	  $scope.show = function(dlg) {
+	    ons.createDialog(dlg).then(function(dialog) {
+	      dialog.show();
+	    });
+	  }
+});
+
+app.controller('NotificationController', function($scope) {
+  $scope.alert = function() {
+    ons.notification.alert({message: 'An error has occurred!'});
+  }
+  
+  $scope.confirm = function() {
+    ons.notification.confirm({
+      title: 'Ingresa su correo electronico',
+      callback: function(idx) {
+        switch(idx) {
+          case 0:
+           // ons.notification.alert({
+           //   message: 'Canceling registration...'
+           // });
+            break;
+          case 1:
+           // ons.notification.alert({
+           //   message: 'Proceeding Registration...'
+           // });
+        	 
+          //  document.location='top_up_options.html';
+            break;
+        }
+        
+      }
+    });
+  }
+
+  
+});

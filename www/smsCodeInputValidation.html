@@ -1,0 +1,14 @@
+<ons-dialog var="dialog" cancelable style="width:90%" ng-controller="rv_auth">
+
+<p>
+	<span style="font-family: 'Ek Mukta', sans-serif;"><label  style="font-family: 'Ek Mukta', sans-serif;float:left;color:#545454;font-weight:bold">{{lg.get("lbl_inputSms")}}</label><img src="images/x.png" alt="" ng-click="closeDlg()" style="padding-top:5px;width:7%;float:right"></span>
+</p>
+<p>&nbsp;</p>
+  <p>
+	<input type="number" style="color:#AAAAAA;border-color:#0259ff" placeholder="{{lg.get('lbl_smsNumber')}}" maxlength="11"  value="{{smsNumberInfo.userSmsNumber()}}" ng-model="smsNumberInfo.userSmsNumber" ng-model-options="{ getterSetter: true }" class="text-input">
+  </p>
+  <p>
+	<ons-button modifier="normal" class="button-green-new" style="text-transform:normal;width:100%;text-align:center" ng-click="validateSmsCode()">{{lg.get("btn_validateSms")}}</ons-button>
+  </p>
+
+</ons-dialog> 

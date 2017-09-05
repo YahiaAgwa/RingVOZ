@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+    <title>RingVoz App</title>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://debug.monaca.mobi http://analytics.localytics.com;">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="mobile-web-app-capable" content="yes">
+   	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="components/loader.js"></script>
+    <script src="spinnerplugin.js"></script>
+    <script src="localytics.js"></script> 
+    <script src="lib/ringvoz/top_up.js"></script>
+	<script src="GAPlugin.js"></script>
+    <link rel="stylesheet" href="lib/intl-input/css/intlTelInput.css">
+<link rel="stylesheet" href="lib/intl-input/css/demo.css">
+<script src="telephonenumber.js"></script>
+<script src="lib/intl-input/js/intlTelInput.min.js"></script>
+    <script>
+		var localyticsSession; 
+		var networkState;
+		var states = {};
+        var d=false;
+
+
+		function checkConnection() {
+            networkState = navigator.connection.type;
+			//networkState = navigator.network.connection.type;
+			
+			states[Connection.UNKNOWN]  = 'Unknown connection';
+			states[Connection.ETHERNET] = 'Ethernet connection';
+			states[Connection.WIFI]     = 'WiFi connection';
+			states[Connection.CELL_2G]  = 'Cell 2G connection';
+			states[Connection.CELL_3G]  = 'Cell 3G connection';
+			states[Connection.CELL_4G]  = 'Cell 4G connection';
+			states[Connection.CELL]     = 'Cell generic connection';
+			states[Connection.NONE]     = 'No network connection';
+		    if(!d){	
+			window.analytics.trackEvent('NetworkTypeUsage', states[networkState]);
+            }
+		}
+
+		
+	/*	function onLoad() {
+		  document.addEventListener("DOMContentLoaded", function() {
+            // Initialize code here
+            onDeviceReady();
+            
+            });
+		}*/
+
+    	function onOffline() {
+            if(!d){
+			window.analytics.trackEvent('NetworkStatus', 'GoingOffLine');
+			localyticsSession.tagEvent("NetworkStatus_GoingOffLine");
+			document.location = 'error_NoNetwork.html';
+            }
+		}
+
+		
+	function successCallback(lg) {
+	 _usrLg = lg.value;
+	}
+	function errorCallback(lg) {
+//	    alert('error getting language');
+	}
+		
+		
+		
+		function onDeviceReady() {
+
+
+		//	navigator.globalization.getPreferredLanguage(successCallback, errorCallback);	
+
+			
+		 //  checkConnection();
+           // networkState=2;
+           // states[networkState]='WiFi connection';
+           /*comentar*/
+     //      localStorage.promo="enabled";
+           /* fin comentar */
+           if(localStorage.promo=="enabled"){
+                var txtstyle='<style id="bdgstyle">.badge:after{';
+                txtstyle+='content: "!" !important;';
+                txtstyle+='position: absolute !important;';
+                txtstyle+='background: rgba(200, 100, 41,1) !important;';
+                txtstyle+='height: 1.0rem !important;';
+                if(device.platform === 'iOS'){
+                    txtstyle+='top: 1.0rem !important;';
+                    txtstyle+='right: 77% !important;';
+                }
+                else if(device.platform === 'Android'){
+                    txtstyle+='top: 0.6rem !important;';
+                    txtstyle+='right: 76% !important;';
+                }
+                txtstyle+='width: 1.0rem !important;';
+                txtstyle+='text-align: center !important;';
+                txtstyle+='line-height: 1rem !important;';
+                txtstyle+='font-size: 0.8rem !important;';
+                txtstyle+='font-weight: bold !important;';
+                txtstyle+='border-radius: 50% !important;';
+                txtstyle+='color: white !important;';
+                txtstyle+='border: 1px solid #ccc !important;';
+                txtstyle+='z-index: 10000 !important;}</style>';
+                $('head').append(txtstyle);
+           }
+           
+            $(".badge" ).click(function() {
+                if(localStorage.promo=="enabled"){
+                    localStorage.promo="disabled";
+                    $('#bgdstyle').remove();
+                    document.location = 'promo.html'
+                }
+            });
+            
+
+			
+			localyticsSession = LocalyticsSession("4c8ce55900474975b514214-0108efd6-9cd4-11e4-a6f7-005cf8cbabd8");
+			localyticsSession.open();
+			localyticsSession.upload();
+			if (!d){
+			if (_platformId == 'android' ) {
+		//		window.analytics.startTrackerWithId('UA-52002220-7');
+			} else {
+		//		window.analytics.startTrackerWithId('UA-52002220-8');
+			}
+			}
+		//	document.addEventListener("offline", onOffline, false);
+		}
+        
+        window.onload = function () {
+            
+            
+ 
+            checkConnection();
+                    
+
+                    if (states[networkState] == 'No network connection' && !d) {
+				        document.location = 'error_PreInstallNoNetwork.html';
+			        } 
+                    
+                    
+             try {
+                 if (navigator.userAgent.match(/Android/i)) {
+        		     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
+                    } 
+                     else{
+                     var userLang = navigator.language || navigator.userLanguage
+                     userLang = userLang.substr(0,2);
+                     console.log('iOS Language detected:'+userLang); 
+                     localStorage.lang=userLang+"-US";
+                }
+             }
+             catch(err) {
+				alert(err);
+			}
+                    
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+    		// Initialize code here
+			onDeviceReady();
+		});
+        document.addEventListener('deviceready', onDeviceReady, true);
+        
+        
+
+   </script>
+   
+<style>
+
+  
+  
+  /*  Basic stucture
+=====================*/
+#accordion{margin:0px;width:100%;overflow:scroll;}
+#accordion ul{list-style:none;margin:0;padding:0;}
+.accordion{display:none;}
+.accordion:target{display:block;}
+#accordion ul li a{text-decoration:none;display:block;padding:10px;}
+.accordion{padding:4px;}
+
+/*  Colors 
+====================*/
+#accordion ul{
+/*box-shadow*/
+-webkit-box-shadow:0 4px 10px #BDBDBD;
+   -moz-box-shadow:0 4px 10px #BDBDBD;
+        box-shadow:0 4px 10px #BDBDBD;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+#accordion ul li a{
+background:#fff;
+border-bottom:1px solid #E0E0E0;
+color:#999;
+}
+.accordion{
+background:#fdfdfd;
+color:#999;
+}
+.accordion:target{
+border-top:3px solid #FFCDCD;
+}
+
+</style>
+</head>
+<body ng-controller="InterTopUpController">    
+    <ons-tabbar var="tabbar" hide-tabs="{{hideTabs}}">
+		<ons-tabbar-item
+            icon="home"
+            label="Menú Principal"
+            page="top_up_navigator.html"
+            active="true"></ons-tabbar-item>
+       <ons-tabbar-item 
+            icon="fa-list-alt"	
+            label="Transacciones"
+            page="transactionsHistory.html"></ons-tabbar-item>
+		<ons-tabbar-item 
+            icon="gear"	
+            label="Configuración"
+            page="mySettings.html"></ons-tabbar-item>
+        <ons-tabbar-item  
+            icon="ion-ios7-help"
+            label="Ayuda"
+            page="support.html">
+            </ons-tabbar-item>
+    </ons-tabbar>
+</body>
+</html>
+

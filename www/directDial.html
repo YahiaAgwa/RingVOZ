@@ -1,0 +1,87 @@
+
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+<br>
+	<!--<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div class="TopBlueBarTitle">
+		 <img align="left" style="width:12%;padding-left:5px;padding-top:8px;"  src="images/icono_blanco_direct_dial.png" alt=""/>
+		 <label style="right:50%">{{lg.get("home_opt5")}}</label>
+		 <img align="right" style="width:5%;padding-right:10px;padding-top:18px;" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+		</center>
+	
+	</div>-->
+
+
+<div style="text-align: center" ng-controller="InterTopUpController">
+
+ <ons-row>
+ 
+	
+     <ons-col align="center">
+     
+     	<p class="directDialTitle">
+     	{{lg.get("lbl_directDialContactLst_sub")}}
+     	</p>
+         <br>
+         <p class="directDialSubTitle">
+     	{{lg.get("lbl_directDialMyNumbers")}}
+     	</p>         
+		
+       <div class="DirectDialMainDiv">
+   
+  
+       
+        <div id="parent" ng-repeat="d in userDirectDialNumbers" ng-class-odd="'odd'" ng-class-even="'even'">
+            <div id="colLeft" ng-class-odd="'odd'" ng-class-even="'even'"  ng-click="callDirectDial()">
+                 <img src="images/directDialCallContact.png" style="float:left" alt=""/>
+                
+            </div><!--
+            --><div id="colCenter" ng-class-odd="'odd'" ng-class-even="'even'">
+                <p>
+                    <label id="directDialAliasLbl" style="font-weight:700">{{d.INFO4}}</label>
+                    </p><p>
+                    <label id="directDialLocalNbr1">Numero local:{{d.INFO3}}</label>
+                    </p><p>
+                    <label id="directDialLocalNbr2">Numero Inter.:{{d.INFO3}}</label>
+                </p>
+                
+                
+            </div>
+            <div id="colRight" ng-class-odd="'odd'" ng-class-even="'even'"  ng-click="editDirectDial(d.INFO3,d.INFO4,d.INFO5)">
+             <img src="images/directDialEditContact.png" style="float:right" alt=""/>
+                
+            </div>
+        </div>
+       
+  
+         
+	
+        </ons-col>
+      </ons-row>  
+	  
+
+	  
+</div>
+<center>
+        <p style="font-family: 'Ek Mukta', sans-serif;padding-left:10px;color:#555555;font-weight:bold;font-size:14px">
+     	{{lg.get("lbl_numberLeftToRegister")}}
+     	</p>
+</center>
+<p>
+       <ons-button class="button-green-new" style="width:95%;font-size:24px" modifier="normal"  ng-click="showAddDirectDialNbr()">{{lg.get("btn_addDirectDialNbr")}}</ons-button>
+      </p>
+
+ 
+  </ons-page>

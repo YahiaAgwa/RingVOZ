@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://debug.monaca.mobi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="components/loader.js"></script>
+    <script src="lib/ringvoz/RingVozInit.js"></script> 
+    <script src="lib/ringvoz/heartcode-canvasloader-min.js"></script>
+    <script src="spinnerplugin.js"></script>   
+    <script src="telephonenumber.js"></script>
+    <!--script src="firebase.js"></script-->
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        var networkState;
+        var states = {};
+        var pushNotification;
+		var senderID="363502789173";
+        var release=true;
+        /*comentar*/
+        //localStorage.promo="enabled";
+        
+
+
+        
+       
+        
+        function checkConnection() {
+			networkState = navigator.connection.type;
+            
+			states[Connection.UNKNOWN]  = 'Unknown connection';
+			states[Connection.ETHERNET] = 'Ethernet connection';
+			states[Connection.WIFI]     = 'WiFi connection';
+			states[Connection.CELL_2G]  = 'Cell 2G connection';
+			states[Connection.CELL_3G]  = 'Cell 3G connection';
+			states[Connection.CELL_4G]  = 'Cell 4G connection';
+			states[Connection.CELL]     = 'Cell generic connection';
+			states[Connection.NONE]     = 'No network connection';		
+            console.log("Connection type: "+states[networkState]);
+		}
+        
+        // PhoneGap event handler
+        function onOffline() {
+			document.location = 'error_PreInstallNoNetwork.html';
+		}
+        
+		function successCallback(lg) { // ios not 
+			//alert('language detected:' + lg.value);
+          	localStorage.lang = lg.value;
+			if (lg.value == "en-US" || lg.value == "en-CO") {
+				document.getElementById('indexDiv').classList.add('RingVozConnectYouNewEn'); //add
+			} else {
+				document.getElementById('indexDiv').classList.add('RingVozConnectYouNew'); //add
+			}
+		}
+		function errorCallback() {
+			
+		}
+		
+		function onDeviceReady() {
+        //  alert('loading device ready...');
+        //  alert(navigator.userAgent.toString());
+             //  enableBadge();
+            if(release){        
+             /*   pushNotification = window.plugins.pushNotification;
+                if (device.platform == 'android' || device.platform == 'Android') {
+                    console.log("registering android");
+                    pushNotification.register(successHandler, errorHandler, {
+                        "senderID": senderID,
+                        "ecb": "onNotificationGCM"
+                    }); // required!
+                } else {
+                    console.log("registering iOS");
+                    pushNotification.register(tokenHandler, errorHandler, {
+                        "badge": "true",
+                        "sound": "true",
+                        "alert": "true",
+                        "ecb": "onNotificationAPN"
+                    }); // required!
+                }  */
+                //var plt= device.platform;
+                
+                if (monaca.isAndroid) {
+                    
+                    FirebasePlugin = window.FirebasePlugin;
+                    try{
+                        FirebasePlugin.getToken(function(token) {
+                        // save this server-side and use it to push notifications to this device
+                         console.log("registering android token:"+token);
+                        var xmlhttp=new XMLHttpRequest();
+                        var os=1; //android
+                        xmlhttp.open('POST','https://mobileapp.ringvoz.com/V2/token/RingVozApp?user=RingVozApp&pass=t3l0nlin3', true);
+                        xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+                        xmlhttp.send('deviceid='+device.uuid+'&devicetoken='+token+'&devicetype='+os);
+                        }, function(error) {
+                            console.error(error);
+                        });
+                        
+                         FirebasePlugin.onNotificationOpen(function(notification) {
+                            console.log(notification);
+                           /*     FirebasePlugin.getBadgeNumber(function(n) {
+                                    FirebasePlugin.setBadgeNumber(n+1);
+                                });*/
+                            localStorage.promo="enabled";
+                            document.location = 'promo.html';
+                        }, function(error) {
+                            console.error(error);
+                        });
+                    }
+                    catch(e){
+                        console.log(e.message);
+                    }  
+                }
+                else if(monaca.isIOS){
+                    FirebasePlugin = window.FirebasePlugin;
+                    try{
+/*                        FirebasePlugin.hasPermission(function(data){
+                            if (!data.isEnabled){
+                                FirebasePlugin.grantPermission();
+                            }
+                            else{*/
+                                 FirebasePlugin.getToken(function(token) {
+                                // save this server-side and use it to push notifications to this device
+                                 console.log("registering iOS token:"+token);
+                                var xmlhttp=new XMLHttpRequest();
+                                var os=2; //iOS
+                                xmlhttp.open('POST','https://mobileapp.ringvoz.com/V2/token/RingVozApp?user=RingVozApp&pass=t3l0nlin3', true);
+                                xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+                                xmlhttp.send('deviceid='+device.uuid+'&devicetoken='+token+'&devicetype='+os);
+                                }, function(error) {
+                                    console.error(error);
+                                });
+                                
+                                 FirebasePlugin.onNotificationOpen(function(notification) {
+                                    console.log(notification);
+                                    /*    FirebasePlugin.getBadgeNumber(function(n) {
+                                            FirebasePlugin.setBadgeNumber(n+1);
+                                        });*/
+                                    localStorage.promo="enabled";
+                                    document.location = 'promo.html';
+                                    // 
+                                }, function(error) {
+                                    console.error(error);
+                                });
+                          /*  }
+                        }); */   
+                    }
+                    catch(e){
+                        console.log(e.message);
+                    }
+                }
+                
+                /*window.FirebasePlugin.onTokenRefresh(function(token) {
+                    // save this server-side and use it to push notifications to this device
+                    console.log(token);
+                }, function(error) {
+                    console.error(error);
+                });*/
+                
+            }
+            var element = document.getElementById('deviceCheck'),
+            style = window.getComputedStyle(element),
+            top = style.getPropertyValue('display');
+            //  alert(top);
+            document.addEventListener("offline", onOffline, false);
+			if(navigator.userAgent.toLowerCase().match(/ipod/) /*|| navigator.userAgent.toLowerCase().match(/ipad/)*/) {
+				if (localStorage.lang == 'en-US' || localStorage.lang == 'en-CO') {
+					document.location = 'appCompatibility_en.html';
+			    } else {
+					document.location = 'appCompatibility.html';
+				}
+			} else {
+            //  alert("ios deviceId1="+device.uuid);
+			    setTimeout(function(){ Init(); }, 3000);   
+			}
+        }
+    
+    if(release){
+     /*   try{
+        FirebasePlugin = window.FirebasePlugin;
+       
+        }catch(e){
+            console.log(e.message);
+        }*/
+        
+   //     try{
+         //   window.
+    //    }catch(e){}
+        // handle APNS notifications for iOS
+    /*   function onNotificationAPN(e) {
+            if (e.alert) {
+            //    navigator.notification.alert(e.alert);
+                localStorage.promo="enabled";
+                document.location = 'promo.html';
+            }
+            if (e.sound) {
+                var snd = new Media('www/RINGTONE_FINAL.wav');
+                snd.play();
+            }
+            if (e.badge) {
+                pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
+            }
+            
+        }
+
+        // handle GCM notifications for Android
+        function onNotificationGCM(e) {
+          //  navigator.notification.alert(e.event);
+            switch (e.event) {
+                case 'registered':
+                    if (e.regid.length > 0) {
+                    //    navigator.notification.alert(e.regid);
+                        console.log("regID = " + e.regid);
+                        keyHandler(e.regid,'1');// 1 for  android device
+                        // Your GCM push server needs to know the regID before it can push to this device
+                        // here is where you might want to send it the regID for later use.
+                        //console.log("regID = " + e.regid);
+                    }
+                break;
+                case 'message':
+                        // if this flag is set, this notification happened while we were in the foreground.
+                        // you might want to play a sound to get the user's attention, throw up a dialog, etc.
+                    if (e.foreground) {
+                        //navigator.notification.alert('il: '+e.message, function(){}, e.title, 'Ok');
+                        // if the notification contains a soundname, play it.
+                        var my_media = new Media('file://android_asset/www/RINGTONE_FINAL.wav',
+                                                // success callback
+                                                function() {
+                                                    console.log("playAudio():Audio Success");
+                                                },
+                                                // error callback
+                                                function(err) {
+                                                    console.log("playAudio():Audio Error: "+err);
+                                                });
+                        // Play audio
+                        my_media.play();
+                    } else { // otherwise we were launched because the user touched a notification in the notification tray.
+                        if (e.coldstart) {
+                            // app closed call app to show alert
+                            //navigator.notification.alert('');
+                            document.location = 'promo.html';
+                        }
+                        else{
+                            //navigator.notification.alert('bg:' +e.message, function(){}, e.title, 'Ok');  
+                        } 
+                    }
+                    //navigator.notification.alert(e.payload.message);
+                  //  navigator.notification.alert(e.message);
+                    //navigator.notification.alert('MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
+                     localStorage.promo="enabled";
+                    
+                break;
+                case 'error':
+                    navigator.notification.alert('ERROR -> MSG:' + e.msg);
+                break;
+                default:
+                    navigator.notification.alert('EVENT -> Unknown, an event was received and we do not know what it is');
+                break;
+            }
+        }
+        
+        function tokenHandler(result) {
+        //    navigator.notification.alert(result, null, 'Alert', 'OK');
+            sessionStorage.setItem("deviceId", result);
+            sessionStorage.setItem("notificationServer", "APNS");
+            keyHandler(result,'2'); //2 for ios device
+            // Your iOS push server needs to know the token before it can push to this device
+            // here is where you might want to send it the token for later use.
+        }
+ 
+        function successHandler(result) {
+        //    navigator.notification.alert(result, null, 'Alert', 'OK');
+            sessionStorage.setItem("deviceId", result);
+            sessionStorage.setItem("notificationServer", "GCM");
+        }
+
+        function errorHandler(error) {
+        //    navigator.notification.alert(error, null, 'Alert', 'OK');
+        }
+        
+        function keyHandler(regid,os){
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.open('POST','https://mobileapp.ringvoz.com/V2/token/RingVozApp?user=RingVozApp&pass=t3l0nlin3', true);
+            xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+            xmlhttp.send('deviceid='+device.uuid+'&devicetoken='+regid+'&devicetype='+os);
+        
+        }*/
+        
+        
+    }        
+            
+        window.onload = function () {
+                    checkConnection();
+        	        if (states[networkState] == 'No network connection') {
+				        document.location = 'error_PreInstallNoNetwork.html';
+			        } else {
+
+    				    var cl = new CanvasLoader('loadingSpinner');
+	        			cl.setColor('#0462FF'); // default is '#000000'
+		        		cl.setShape('spiral');
+			        	cl.show(); // Hidden by default
+                    }
+            try {
+                 if (navigator.userAgent.match(/Android/i)) {
+    			     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
+                     console.log('Preferred Language detected for Android');
+                     monaca.getDeviceId( function(deviceId) { //working on android but not 4 ios
+                        console.log( "Android deviceId = " + deviceId );
+                        $('#deviceId').text(deviceId);
+                     });
+                    
+                 
+                 }
+                 else{
+                     var userLang = navigator.language || navigator.userLanguage
+                     userLang = userLang.substr(0,2);
+                     console.log('iOS Language detected:'+userLang); 
+                     localStorage.lang=userLang+"-US";
+                     if (userLang == "en") {
+                        document.getElementById('indexDiv').classList.add('RingVozConnectYouNewEn'); //add
+			         } 
+                     else {
+				        document.getElementById('indexDiv').classList.add('RingVozConnectYouNew'); //add
+			         }
+                   
+                    if(navigator.userAgent.toLowerCase().match(/ipod/) /*|| navigator.userAgent.toLowerCase().match(/ipad/)*/) {
+				    	if (localStorage.lang == 'en-US' || localStorage.lang == 'en-CO') {
+					    	document.location = 'appCompatibility_en.html';
+					    } else {
+						    document.location = 'appCompatibility.html';
+					    }
+				    } else {
+                      //  alert("ios deviceId2="+device.uuid);
+				        setTimeout(function(){ Init(); }, 3000);   
+				    }
+                                        
+                //   Init();
+                 }
+                 
+                
+                
+                 
+			}
+			catch(err) {
+				alert(err);
+			}
+        }
+     
+		document.addEventListener("DOMContentLoaded", function() {
+			// Initialize code here
+			onDeviceReady();
+            onload();
+		});
+        document.addEventListener('deviceready', onDeviceReady, true);
+       
+    </script>
+</head>
+<body>
+ <div id="indexDiv" style="width:100%;height:100%">
+ <br>
+ <center>
+ <div  style="bottom:40px;position:absolute;left:45%;">
+ <center>
+ <div id="loadingSpinner">
+ </div>
+</center>
+</div>
+<center>
+</div>
+<div id="deviceCheck" class="isTablet"></div>
+</script>
+</body>
+</html>

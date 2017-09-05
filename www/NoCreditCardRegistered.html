@@ -1,0 +1,21 @@
+<ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="height:210px;width:95%">
+     <center>
+	 <p>
+		<span><label style="font-family: 'Ek Mukta', sans-serif;font-size:23px;color:#565656;font-weight:bold">{{lg.get("lbl_noCCorDebitCardRegistered")}}</label></span>
+	</p>
+	 <p>
+		<span><label style="font-family: 'Ek Mukta', sans-serif;color:#565656;font-weight:bold">{{lg.get("lbl_addOneCardNow")}}</label></span>
+	</p>
+	
+	<p>
+
+	<ons-button class="button-orange-new" style="width:46%;font-size:16px" modifier="normal" onclick="document.location = 'top_up_options.html'">
+	{{lg.get("btn_noThanks")}}
+	</ons-button>
+	<ons-button class="button-green-new" style="width:46%;font-size:16px" modifier="normal" ng-click="registerCreditCardNow()">
+	{{lg.get("btn_yesPlease")}}
+	</ons-button>      
+
+	</p>
+	</center>
+</ons-dialog>

@@ -1,0 +1,12 @@
+ <ons-dialog var="dialog" cancelable ng-controller="rv_auth" style="width:90">
+     <ons-list-item style="border-color:transparent">
+			<span><label style="font-family: 'Ek Mukta', sans-serif;float:left;color:#565656;font-weight:bold">{{lg.get("lbl_errorGettingBalance")}}</label><img src="images/x.png" alt="" ng-controller="rv_auth" ng-click="closeDlg()" style="padding-top:10px;width:7%;float:right"></span>
+		</ons-list-item>
+
+ 
+      <p>
+        <center><ons-button class="button-orange-new" ng-click="retryRegistering()" style="text-align:center;width:60%" modifier="normal">{{lg.get("btn_close")}}</ons-button></center>
+      </p>
+  </ons-dialog>
+  
+  

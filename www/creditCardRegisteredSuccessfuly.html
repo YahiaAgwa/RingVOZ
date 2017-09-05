@@ -1,0 +1,23 @@
+<ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="width:95%">
+     <center>
+	 <p>
+		<span><label style="font-family: 'Ek Mukta', sans-serif;font-size:23px;color:#565656;font-weight:bold">{{lg.get("lbl_cardAddSuccessfuly")}}!</label></span>
+	</p>
+	 <p>
+		<span><label style="font-family: 'Ek Mukta', sans-serif;color:#565656;font-weight:bold">{{lg.get("lbl_whatDoYouWantToDo")}}?</label></span>
+	</p>
+	
+	<p>
+
+	<ons-button class="button-green-new" style="width:93%;font-size:26px" modifier="normal" ng-click="doRecharge()">
+	{{lg.get("btn_topUpRecharge")}}
+	</ons-button>
+	<p>
+	<p>?</p>
+	<p>
+	<ons-button class="button-green-new" style="width:93%;font-size:26px" modifier="normal" ng-click="rechargeWithCreditCard()">
+	{{lg.get("btn_myAccountRecharge")}}
+	</ons-button>      
+	</p>
+	</center>
+</ons-dialog>

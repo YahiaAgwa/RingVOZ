@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  	<meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://debug.monaca.mobi http://analytics.localytics.com;">
+   	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="components/loader.js"></script>
+    <script src="lib/ringvoz/top_up.js"></script>
+	<script src="spinnerplugin.js"></script>
+	<script src="localytics.js"></script> 
+	<script src="GAPlugin.js"></script> 
+	
+    <script>
+		var localyticsSession; 
+		var networkState;
+		var states = {};
+
+		
+		function checkConnection() {
+			networkState = navigator.connection.type;
+			
+			states[Connection.UNKNOWN]  = 'Unknown connection';
+			states[Connection.ETHERNET] = 'Ethernet connection';
+			states[Connection.WIFI]     = 'WiFi connection';
+			states[Connection.CELL_2G]  = 'Cell 2G connection';
+			states[Connection.CELL_3G]  = 'Cell 3G connection';
+			states[Connection.CELL_4G]  = 'Cell 4G connection';
+			states[Connection.CELL]     = 'Cell generic connection';
+			states[Connection.NONE]     = 'No network connection';
+		}
+
+		
+		function onLoad() {
+			document.addEventListener("deviceready", onDeviceReady, false);
+		}
+
+		function nativePluginResultHandler (result) {
+			//alert('nativePluginResultHandler - '+result);
+			//console.log('nativePluginResultHandler: '+result);
+
+		}
+	
+		function nativePluginErrorHandler (error) {
+			//alert('nativePluginErrorHandler - '+error);
+			//console.log('nativePluginErrorHandler: '+error);
+		}
+		
+		function successCallback(lg) {
+			_usrLg = lg.value;
+			//alert(lg.value);
+		}
+		function errorCallback() {
+			alert('error getting language');
+		}
+		
+		function onDeviceReady() {
+			checkConnection();
+			
+			localyticsSession = LocalyticsSession("4c8ce55900474975b514214-0108efd6-9cd4-11e4-a6f7-005cf8cbabd8");
+			localyticsSession.open();
+			localyticsSession.upload();
+			
+			if (_platformId == 'android') {
+				gaPlugin = window.plugins.gaPlugin;
+				gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-52002220-7", 10);
+			}	
+
+			navigator.globalization.getPreferredLanguage(successCallback, errorCallback);			
+		}
+
+   </script>
+
+ <style>
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+body {
+    margin: 0px;
+}    
+    
+
+  
+  /*  Basic stucture
+=====================*/
+#accordion{margin:0px;width:100%;overflow:scroll;}
+#accordion ul{list-style:none;margin:0;padding:0;}
+.accordion{display:none;}
+.accordion:target{display:block;}
+#accordion ul li a{text-decoration:none;display:block;padding:10px;}
+.accordion{padding:4px;}
+
+/*  Colors 
+====================*/
+#accordion ul{
+/*box-shadow*/
+-webkit-box-shadow:0 4px 10px #BDBDBD;
+   -moz-box-shadow:0 4px 10px #BDBDBD;
+        box-shadow:0 4px 10px #BDBDBD;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+#accordion ul li a{
+background:#fff;
+border-bottom:1px solid #E0E0E0;
+color:#999;
+}
+.accordion{
+background:#fdfdfd;
+color:#999;
+}
+.accordion:target{
+border-top:3px solid #FFCDCD;
+}
+
+
+</style>
+  
+</head>
+
+<body onload="onLoad()" >  
+<ons-row ng-controller="InterTopUpController">
+  <div class="RingVozLetsBegin" >
+   <div class="topbar"></div>
+ <img src="images/mascota_bienvenidos.png" alt="" style="width:68%">
+  <div class="title">{{lg.get("lbl_welcomeToRingVoz")}}</div>
+ <div class="subtitle">{{lg.get("lbl_contactYourFriendsFamilly")}}</div> 
+ <div class="subtitle">{{lg.get("lbl_contactYourFriendsFamilly2")}}</div>  
+
+ <br>
+
+ <div class="balance-text">{{lg.get("lbl_accountBalance")}}:&nbsp;<span><label class="balance-number"  ng-bind="rechargeDetails.accountBalance()" id="accBalance"></label></span></div>  
+ 
+ <p>
+
+
+ 
+   <ons-button modifier="normal" class="button-green-new" ng-click="show('registerEmail.html')" style="width:95%">
+            {{lg.get("btn_continue")}}
+          </ons-button>
+ </p>
+
+  <img src="images/sello_garantia{{lg.get('lbl_lgTag')}}.png" alt="" style="width:35%">
+
+
+</div> 
+ </ons-row>	  
+	<ons-template id="registerEmail.html">
+	  <ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="width:90%">
+	  <center>
+				<p>
+			<span style="font-family: 'Ek Mukta', sans-serif;"><label style="padding-left:5px;font-family: 'Ek Mukta', sans-serif;float:left;color:#545454;font-weight:bold">{{lg.get("lbl_inputYourEmail")}}</label><img src="images/x.png" alt="" ng-click="closeDlg()" style="padding-top:5px;width:7%;float:right;padding-right:5px;"></span>
+		</p>
+	
+	<p>&nbsp;</p>
+	      <p style="padding-top:10px;">
+		 
+	        <input type="text" style="width:95%;padding-left:5px;color:#444;border-color:#0259ff" placeholder="Correo Electrónico" ng-model="rechargeDetails.email" value="{{rechargeDetails.email()}}" ng-model-options="{ getterSetter: true }" class="text-input" />
+			
+	      </p>
+	    
+	      
+	    
+	      <p>
+	        <ons-button modifier="normal" class="button-green-new" style="width:95%;text-align:center" ng-click="updateUserAccount('top_up_options.html',false)">OK</ons-button>
+	      </p>
+	</center>
+	  </ons-dialog> 
+	</ons-template>	
+</body>
+</html>

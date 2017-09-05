@@ -1,0 +1,121 @@
+  <ons-page  class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+	<br>
+	<!--<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("home_opt3")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+		</center>
+		
+	</div>-->
+
+<br>
+ <div class="MySettingsGrayBox">
+ 	<ons-row>
+ 	
+        <ons-col align="left">
+		<br>
+  		<p style="line-height:15px;padding-left:5px;font-weight:bold;font-size:12px">
+		<span>
+        <input ng-model="rechargeDetails.ccFirstName" ng-model-options="{ getterSetter: true }" placeholder="Nombre" id="firstname" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+      
+        <input ng-model="rechargeDetails.ccLastName" ng-model-options="{ getterSetter: true }" placeholder="Apellidos" id="lastname" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+		</span>
+      	</p>
+	
+  		<p style="line-height:15px;padding-left:5px;font-weight:bold;font-size:12px">
+        <input ng-model="rechargeDetails.ccAddress" ng-model-options="{ getterSetter: true }" placeholder="Dirección" id="address" class="text-input" style="color:#444;border-color:#0082fe;width:99%">
+      	</p>
+  
+  
+        <p style="padding-left:5px;line-height:15px;font-weight:bold;font-size:12px">
+		<span>
+        <input ng-model="rechargeDetails.ccCity" ng-model-options="{ getterSetter: true }" placeholder="Cuidad" id="ccCity" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+		<input ng-model="rechargeDetails.ccState" ng-model-options="{ getterSetter: true }" placeholder="Estado" id="ccState" class="text-input" style="color:#444;border-color:#0082fe;width:49%">		
+		</span>
+      	</p>
+ 
+        <p style="line-height:15px;padding-left:5px;font-weight:700;font-size:12px">
+        <input ng-model="rechargeDetails.ccZipCode" ng-model-options="{ getterSetter: true }" placeholder="Código Postal" id="ccZipCode" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+      	</p>
+ 
+ 
+	 	<p style="line-height:15px;padding-left:5px;">
+		 <select class="custom-dropdown-countrycc"  
+		    ng-change="selectccCountryAction()"
+		    ng-model="myccCountry"
+		    ng-options="value.name for value in allCountries">
+		</select>
+      	</p>
+ 
+      
+		<p style="color:#002CB1;font-weight:bold;font-size:12px">
+			<center>
+            <img src="images/iconos_tarjetas_credito.png" style="width:80%">
+			</center>
+        </p>
+  
+  		<p style="line-height:15px;padding-left:5px;color:#002CB1;font-weight:bold;font-size:12px">&nbsp;<span ng-bind="rechargeDetails.paymentMethod()"></span><br>
+        <input type="number" ng-model="rechargeDetails.ccNumber" maxlength="19" ng-model-options="{ getterSetter: true }" placeholder="{{lg.get('lbl_paymentMethodCardNbr')}}" class="text-input" style="color:#444;border-color:#0082fe;width:99%">
+      	</p> 
+   
+   
+         <p style="padding-left:5px;color:#002CB1;font-weight:bold;font-size:12px">
+		<center>
+		<span>
+		<select class="custom-dropdown-ccmonthyear"   
+		    ng-change="selectExpMonthAction()"
+		    ng-model="myExpMonth"
+		    ng-options="value.name for value in ccExpMonths">
+			<option name="" value="">{{lg.get("lbl_month")}}</option>
+		</select>
+		<select class="custom-dropdown-ccmonthyear"   
+		    ng-change="selectExpYearAction()"
+		    ng-model="myExpYear"
+		    ng-options="value.name for value in ccExpYears">
+			<option name="" value="">{{lg.get("lbl_year")}}</option>
+		</select>
+		<input type="number" ng-model="rechargeDetails.cvv" maxlength="4" ng-pattern="/^[0-9]+$/" ng-model-options="{ getterSetter: true }" placeholder="CVV" class="text-input" style="color:#444;border-color:#0082fe;width:31%">
+      	</span>
+		</center>
+      	</p>
+         </ons-col>
+      </ons-row>     
+      
+      <ons-row>
+        <ons-col align="center">
+		<div id="anchor2"></div>
+        <p>
+		<br>
+		  <ons-button class="button-orange-new" style="width:35%;font-size:20px" modifier="normal" onclick="myNavigator.popPage()">
+            {{lg.get("btn_back")}}
+          </ons-button>
+		
+           <ons-button class="button-green-new" style="width:55%;font-size:20px" modifier="normal" ng-click="setPaymentMethodDetails()">
+        {{lg.get("btn_addCard")}}
+      </ons-button>      
+   
+          </p>
+        </ons-col>
+      </ons-row>
+      <ons-row>
+ 	
+        <ons-col align="center">
+		 <br><br><br><br><br><br><br><br><br><br>
+		    </ons-col>
+      </ons-row>  
+</div>
+   
+  </ons-page>

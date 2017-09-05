@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="lib/onsen/css/onsenui.css"/>
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css"/>
+<script src="lib/onsen/js/angular/angular.js"></script>
+        <script src="lib/onsen/js/onsenui.js"></script>
+        
+        <style>
+    ons-carousel-item {
+      display: table;
+      text-align: center;
+      visibility: visible !important;
+      width:100% !important;
+      height:100% !important;
+    }
+    
+     ons-carousel-item > div {
+        margin: 0 auto;
+    }
+
+
+    
+    .item-label {
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      line-height: 1;
+      font-size: 48px;
+      font-weight: bold;
+    }
+    
+    .cover-label {
+      text-align: center;
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      bottom: 10px;
+      color: white;
+    }
+    </style>
+<script>
+  var module = ons.bootstrap();
+   module.controller('PageController', function($scope,$http) {
+    ons.ready(function() {
+       var content = document.getElementById("carousel");
+       content.innerHTML="";
+      $http.get('https://www.ringvoz.com/myaccount/public/mobile/getpromos')
+        .success(function(data, status, headers, config) { 
+            for(i=0;i<data.msj.length;i++){
+                //_imgs.push(data.msj[i].image_url);
+                content.innerHTML+="<ons-carousel-item style='width=100%;height=100%;'><div style='width:90%;height:100%;background-image: url(https://www.ringvoz.com/promo/app/img/"+data.msj[i].image_url+");background-size:cover;'></div></ons-carousel-item>";
+                ons.compile(content);
+               // alert(_imgs[i]);
+            }
+            content.innerHTML+="<ons-carousel-cover><div class='cover-label' style='color:blue !important;'>&#x2190;&#x2190;&#x2190;&nbsp;&nbsp;&nbsp;&#x2192;&#x2192;&#x2192;</div></ons-carousel-cover>";
+            ons.compile(content);    
+        })
+        .error(function(data, status, headers, config) {});
+        //content.innerHTML+="<ons-carousel-cover><div class='cover-label'>Swipe left or right</div></ons-carousel-cover>";
+        
+      
+    
+    // Add another Onsen UI element
+   
+    
+    });});
+        
+    </script>
+<ons-page ng-controller="PageController">
+  <ons-toolbar><center>
+    <div class="left">
+      <ons-toolbar-button onclick="prev()">
+        <ons-icon icon="md-chevron-left"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+    <div class="center" onClick="javascript: document.location='index.html'" style='color:blue !important;font-weight:bold;font-size:28px;' >&#x21E6;</div>
+    <div class="right">
+      <ons-toolbar-button onclick="next()">
+        <ons-icon icon="md-chevron-right"></ons-icon>
+      </ons-toolbar-button>
+    </div></center>
+  </ons-toolbar>
+  <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+ 
+  </ons-carousel>
+</ons-page>
+ 

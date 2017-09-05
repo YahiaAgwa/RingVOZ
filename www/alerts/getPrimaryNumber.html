@@ -1,0 +1,19 @@
+      <ons-dialog var="inputNumberDialog" ng-controller="rv_auth" cancelable style="width:90%">
+	
+		<p>
+			<span style="font-family: 'Ek Mukta', sans-serif;"><label ng-controller="rv_auth" style="font-family: 'Ek Mukta', sans-serif;float:left;color:#545454;font-weight:bold">Ingresa el número de tu celular</label><img src="images/x.png" alt="" ng-controller="rv_auth" ng-click="closeInputNbrDlg()" style="padding-top:5px;width:7%;float:right"></span>
+		</p>
+	    <p>&nbsp;</p>
+	      <p>
+	        <input type="number" style="color:#AAAAAA;border-color:#0259ff" placeholder="Número celular" maxlength="11" ng-controller="rv_auth" ng-bind="primaryNumberInfo.phoneNumber()" ng-model="primaryNumberInfo.phoneNumber" ng-model-options="{ getterSetter: true }" class="text-input">
+	      </p>
+	    
+	      
+	    
+	      <p>
+	        <ons-button modifier="normal" class="button-green-new-pn" style="text-transform:normal;width:48%;text-align:center" ng-click="registerWithIvr()">Llamanos</ons-button>
+			<ons-button modifier="normal" class="button-green-new-pn" style="text-transform:normal;width:48%;text-align:center" ng-click="registerWithSMS()">Enviar SMS</ons-button>
+	      </p>
+	
+	  </ons-dialog> 
+

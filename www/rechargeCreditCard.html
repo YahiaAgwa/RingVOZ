@@ -1,0 +1,111 @@
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+	 <br>
+	<!--   <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("lbl_accountRecharge")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+
+		</center>
+	
+	    </div>-->
+		
+ 	<div style="text-align: center">
+
+  
+	<center>
+		<div id="rechargeCcTitle">
+		<p>{{lg.get("lbl_rechargeAccountForInternational")}}</p>
+		<p style="margin-top:-20px">{{lg.get("lbl_rechargeAccountForInternational2")}}.</p></div>		
+	</center>  
+   <div id="rechargeCcValueTitle">
+			{{lg.get("lbl_rechargeValue")}}:
+     	</div>
+ 
+		<br><br><br>
+  
+  <div class="RechargeCreditCardMoreQty" style="margin-top:-25px;text-align:left" ng-init="listCreditCards()">
+ <img id="10img" style="float:left;width:14%;padding-left:5px;padding-top:5px;" ng-src="{{rechargeAmount10src}}" ng-click="selectCcAmountRechargeFromImg(10,'images/10selected.png')">
+ <img id="15img" style="float:left;width:14%;padding-left:5px;padding-top:5px;" ng-src="{{rechargeAmount15src}}" ng-click="selectCcAmountRechargeFromImg(15,'images/15selected.png')">
+ <img id="20img" style="float:left;width:14%;padding-left:5px;padding-top:5px;" ng-src="{{rechargeAmount20src}}" ng-click="selectCcAmountRechargeFromImg(20,'images/20selected.png')"> 
+		<select id="amlist" class="custom-dropdown-moreqty" style="float:right;width:45%" 
+		    ng-change="selectCcAmountRechargeFromList()"
+		    ng-model="myCcRechargeAmount"
+		    ng-options='value.name for value in creditCardRechargeAmounts'>
+		</select>
+ 
+			
+  <br>
+  </div>
+  <div id="promoban"></div>
+  <!-- ng-options='value.INFO3 as (" ************* " + value.INFO3) for value in userCreditCardsList'> -->
+  <p style="margin-top:0px">	
+		<select class="{{ccClass}}" ng-click="popCreditCardRegistrationPage()" 
+		    ng-change="selectCreditCard()"
+		    ng-model="choosenCard"
+			ng-options='value.INFO3 for value in userCreditCardsList'>
+		</select>	
+  </p>
+ 
+ <center>
+		<div class="securePaymentDivCc1">
+		<div class="securePaymentDivCc2">
+		<img src="images/lockIcon.png">
+		<label class="secureTransac" style="vertical-align: middle;font-weight:700;color:#545454">{{lg.get("lbl_secureRecharge")}}</label>
+		</div>
+		</div>
+ 
+ 
+  <div class="custom-activate-autorecharge">
+    <label class="autoRechargeOnOffLbl">{{onOff}}</label>
+  <label class="checkbox" style="font-weight:700"><input ng-click="showHideAutoRechargeSections()" type="checkbox" ng-checked="{{onOffChecked}}"><div class="checkbox__checkmark"></div></label>
+  </div>
+  <br>
+  <label class="autoRechargeTxt1">{{lg.get("lbl_autoRecharge")}}</label>
+  <br>
+  <label class="autoRechargeTxt2">{{lg.get("lbl_alwaysStayConnected")}}</label>
+  </center>
+  
+	
+		<div class="autoRechargeWhenBalanceLowDiv" style="display:{{displayAutoRechargeTitle}}">
+		<!--<p>{{lg.get("lbl_selectAutoRechargeAmount")}}</p>
+		<p style="margin-top:-20px">{{lg.get("lbl_whenBalanceLess")}}:</p></div>	-->	
+		
+		<p>{{lg.get("lbl_selectAutoRechargeAmount")}} {{lg.get("lbl_whenBalanceLess")}}:</p></div>		
+		
+  
+  
+  	<div class="RechargeCreditCardMoreQty2" style="display:{{displayAutoRechargeAmounts}}">
+			<div>
+			<img ng-src="{{img10src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(10,'images/10selected.png')">
+			<img ng-src="{{img15src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(15,'images/15selected.png')">
+			<img ng-src="{{img20src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(20,'images/20selected.png')">
+			<img ng-src="{{img30src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(30,'images/30selected.png')">
+			<img ng-src="{{img40src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(40,'images/40selected.png')">
+			<img ng-src="{{img50src}}" class="ccAutoRechargeImg" ng-click="switchAutoRechargeAmount(50,'images/50selected.png')">
+			</div>
+		</div>
+  
+		<p>
+		<ons-button class="button-orange-new" style="width:41%;font-size:20px" modifier="normal" onclick="myNavigator.popPage()">
+            {{lg.get("btn_back")}}
+          </ons-button>  
+			<ons-button id="torech" class="button-green-new" style="width:53%;font-size:20px" modifier="normal" ng-click="displayTransactionDetails()">
+			  {{lg.get("btn_rechargeNow")}}
+			</ons-button>
+			</p>
+	    </div>
+
+  </ons-page>

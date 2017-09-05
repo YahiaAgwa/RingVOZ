@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "363502789173",
+    "firebase_url": "https://steel-spirit-99815.firebaseio.com",
+    "project_id": "steel-spirit-99815",
+    "storage_bucket": "steel-spirit-99815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363502789173:android:87e88593cdbe2ef5",
+        "android_client_info": {
+          "package_name": "ringvoz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363502789173-ith32m63inkd20cfi0i3rtkl751qtfue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzVq0qvsaLaU1VImRtxFTIkDcHcQ-kazw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

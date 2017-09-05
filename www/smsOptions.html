@@ -1,0 +1,107 @@
+<style>
+/*.intl-tel-input input, .intl-tel-input input[type=text], .intl-tel-input input[type=tel] {
+        width: 70% !important;
+        display:inline-block !important;
+    }    */
+</style>
+<ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+   	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+
+	<!--   <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <label id="topBlueBarLbl">{{lg.get("lbl_myAccountHistory")}}</label>
+	   </div>
+	  
+		</center>
+	
+	    </div>-->
+			<br>
+		
+<div style="text-align: center" ng-controller="InterTopUpController">
+	 <div class="MySettingsGrayBox">
+<img align="right" src="images/icono6.png" alt="Direct SMS" width="11%" class="iconintpage" ng-click="displaySMSForm()"/>     
+<img class="backtohome" width="22px" src="images/btnclosex.png" ng-click="goHome()" >
+<br>
+	<p >
+	<center><label style="display:{{displaySMSFormView}};position:relative;color:#555555;font-weight:700;font-size:18px;top:-17px;margin-left:-14%;">{{lg.get("lbl_directsms")}}</label></center>
+	</p>
+        <p style="display:{{displaySMSHistoryView}};border:0;"><!--<span> {{lg.get("lbl_hrechdate")}}</span>{{hrechdate}}<br>--><span> {{lg.get("lbl_hsmssent")}}</span>{{hsmssent}}</p>    
+		<table style="width:98%;padding-left:10px;font-size:14px;border:1 solid black">
+            <tbody style="display:{{displaySMSFormView}};border:0" >
+            <tr><td> 
+                <img class="smsdir"  src="images/mynumbers.png" ng-click="showPrevsSMS()" >
+                <input id="smsto" class="smsto" type="tel" placeholder="Número celular" maxlength="15"  style="float:right;">
+                
+                <div id="messages">
+                    <div class="smslen" >
+                        <p style="float: right;  margin-right: -12%;" ng-class="smsSegments.length > 1 ? 'color-red' : '' " >SMS: <span>{{ smsSegments.length }}</span></p>
+                        <p style="float: left;display: inline-block;margin-left: 13%;"    >{{lg.get("lbl_msglen")}}<span >{{ input.length }}</span></p>
+                    </div>
+                    <textarea class="textmsj" ng-trim="false" ng-model="input" rows="4" placeholder="{{lg.get('lbl_plcmessage')}}"
+                              id="msj1"></textarea>
+                    <div ng-if="isGsm" class="gsmhelp">
+                        {{lg.get("lbl_msgexplain")}}
+                    </div>
+                </div>
+            </td></tr>        
+			</tbody>
+			<thead style="display:{{displaySMSHistoryView}};border:0">
+				<tr style="background-color:#f7f7f7">
+					<td style="width:30%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_date")}}</td>
+					<td style="width:25%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_smsmsgto")}}</td>
+					<td style="width:25%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_smsstat")}}</td>
+                    <td style="width:10%;color:#555555;font-size:large;text-align:center">{{lg.get("lbl_smscost")}}</td>
+				</tr>
+			</thead> 
+			<tbody style="display:{{displaySMSHistoryView}};border:0" ng-repeat="t in SMSHistory">
+				<tr ng-if="t.INFO3 > 0.05" style="border:0">
+                <td style="width:30%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO1}}</td>
+                <td style="width:25%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO3}}</td>
+                <td style="width:25%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">{{t.INFO2}}</td>
+                <td style="width:10%;border:0" ng-class-odd="'odd'" ng-class-even="'even'">$ {{t.INFO6}}</td>
+                </tr>
+			</tbody>			
+		</table>
+		
+</div>
+  	<ons-row>
+		<ons-col align="right">
+            <p style="float:right;margin-right: 2%">
+                <ons-button style="display:{{displaySMSFormView}};" class="button-green-new" style="width:40% !important; height:15% !important;" modifier="normal" ng-click="sendSMS()">
+                  {{lg.get("btn_sendsms")}}
+                   <ons-icon icon="ion-paper-airplane" size="26px" fixed-width="true"></ons-icon>
+				</ons-button>
+            </p>    
+  		</ons-col>
+    </ons-row>
+    <hr style="display:{{displaySMSFormView}};width:96%">
+    <ons-row>
+        <ons-col align="center">
+            <p >  
+                <ons-button class="button-blue-new" id="histsms" style="display:{{displaySMSFormView}};border:0;padding-top:5px;width:45%" modifier="normal" ng-click="getSMSHistory()">
+        		  {{lg.get("btn_smshist")}}
+                  <ons-icon icon="ion-clock" size="26px" fixed-width="true"></ons-icon>
+				</ons-button>
+            </p>
+        </ons-col>
+	</ons-row>
+</div>
+<div id="call"></div>
+<script>
+    $( document ).ready( function () {
+        jQuery.validator.addClassRules( "msj", {
+            required: true
+        } );
+    } );
+</script>
+</ons-page>

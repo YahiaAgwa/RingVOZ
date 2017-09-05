@@ -1,0 +1,28 @@
+ <ons-dialog var="dialog" cancelable ng-controller="InterTopUpController" style="width:90%">
+        <ons-list-item style="border-color:transparent">
+			<span><label style="font-family: 'Ek Mukta', sans-serif;float:left;color:#565656;font-weight:bold">{{lg.get("lbl_congrats")}}</label><img src="images/x.png" alt="" ng-controller="InterTopUpController" ng-click="closeDlg()" style="padding-top:10px;width:7%;float:right"></span>
+		</ons-list-item>
+        <p><span><center>
+            <label style="padding-left:7px;padding-bottom:1px;float:left;color:#565656;font-size:12px;font-weight:bold;">{{lg.get("lbl_chippromo1")}}</label> 
+        </span></center></p>
+        <br>
+        <p>
+            <span><center>
+                <div class="RechargeCreditCardMoreQty2" >
+            		<div>
+        			<img ng-src="images/20.png" class="ccAutoRechargeImgChip" ng-click="switchRechAmount(20,'images/20selected.png')">
+        			<img ng-src="images/30.png" class="ccAutoRechargeImgChip" ng-click="switchRechAmount(30,'images/30selected.png')">
+        			<img ng-src="images/40.png" class="ccAutoRechargeImgChip" ng-click="switchRechAmount(40,'images/40selected.png')">
+        			<img ng-src="images/50.png" class="ccAutoRechargeImgChip" ng-click="switchRechAmount(50,'images/50selected.png')">
+        			</div>
+        		</div>
+                </center>
+            </span>
+        </p>
+      <p>
+        <center><ons-button class="button-orange-new" ng-click="closeDlg()" style="text-align:center;width:60%" modifier="normal">{{lg.get("btn_noThanks")}}</ons-button></center>
+      </p>
+  </ons-dialog>
+  
+  
+  

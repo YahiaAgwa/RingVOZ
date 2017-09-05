@@ -1,0 +1,4184 @@
+/* Styles App Mobile - RingVoz - 2014 v 1.0  - Created by: manduquia (17-dic-2014)  - RingVoz, LLC 
+*/
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700';
+@import 'https://fonts.googleapis.com/css?family=Ek+Mukta:300,400,700';
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Ek Mukta', sans-serif;
+    background-color:white;
+}
+
+.odd {
+      color: #555555;
+    font-weight:700;
+    background-color:#f7f7f7;
+}
+.even {
+  	color: #555555;
+	font-weight:700;	
+}
+
+/* Topbar gradient*/ 
+.topbar {
+height: 30px;
+background: linear-gradient(to bottom, #FF8000 0%, #FFF 30%) repeat scroll 0% 0% transparent;
+}
+
+/* Coverloading-text*/ 
+.cover-text {
+
+}
+
+.cover-text h1 {
+  color: #0060FF;
+  font-size: 27px;  
+  line-height: 1;
+ /* margin: 0 0 10px;*/
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cover-text h2 {
+  color: #002CB1;
+  font-size: 27px;  
+  line-height: 1;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/* Styles Header*/ 
+.header {
+	line-height:100%;
+ display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center; 
+  border: none;  
+  min-height: 60px;
+  font-size: 26px;
+
+  width: 99%;
+  color: #fff;
+  background-color: #F00;
+  border: 0px solid #FFC926;
+  background-image: -ms-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFC926), to(#FB6D0C));
+  background-image: -webkit-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -o-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -moz-linear-gradient(top, #FFC926, #FB6D0C); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');  
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);  */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFC926',endColorstr='#FB6D0C',GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);  
+}
+.center label {
+  font-family: 'Ek Mukta';
+  font-weight: 700;
+	display: inline-block;
+  color: #fff;
+  font-size: 24px;
+
+  top: 15px;
+  vertical-align: middle;
+}
+.header h1 {
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+
+.header h2 {
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 400;
+  text-transform: normal;
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.RingVozConnectYou {
+    width: 100%;
+	text-align: center;
+	background-image: url("../images/fondo_general.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozSupport {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/support.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozConnectYouNew {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/index.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozConnectYouNewEn {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/index_en.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.Oops {
+	width: 100%;
+	text-align: center;
+	text-transform:uppercase;
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozFiveStars {
+	width: 60%;
+}
+
+.TopBlueBarTitle {
+text-transform:normal;
+width:100%;
+border:0px solid white;
+padding-left:0px;
+text-align:center;
+color:white;
+margin-top:-8px;
+height:55px;
+background: #339dff;
+background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+background-image: -o-linear-gradient(top, #339dff, #1060bf);
+background-image: linear-gradient(to bottom, #339dff, #1060bf);
+}
+
+.TopBlueBarTitle img {
+	z-index:1000;
+	
+}
+
+.TopBlueBarTitle label {
+	text-align: center;
+    position: relative;
+    top: 16%;
+	left:0%;
+ 
+}
+
+.TopBlueBarTitleTransacDetails {
+text-transform:normal;
+width:100%;
+border:0px solid white;
+padding-left:0px;
+text-align:center;
+height:55px;
+vertical-align:middle;
+color:white;
+font-family: 'Ek Mukta', sans-serif;
+background: #339dff;
+background-image: -webkit-linear-gradient(top, #339dff, #1060bf) !important;
+background-image: -moz-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: -ms-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: -o-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: linear-gradient(to bottom, #339dff, #1060bf)  !important;
+}
+
+
+.TopUpConfirmSelectedOperatorCountry {
+    
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.RechargeCreditCardMoreQty {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-bottom:15px;
+	margin-bottom:10px;
+	margin-top:-25px;
+}
+
+.RechargeCreditCardMoreQty2 {
+	
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:-8px;
+}
+
+.TopUpConfirmSelectedOperatorCountry2 {
+	
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	height:150px;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.DirectDialMainDiv {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	height: auto;
+	border-radius:7px;
+    margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.MySettingsGrayBox {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	font-family: 'Ek Mukta', sans-serif;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.homePageBalance {
+height:34px;
+background-color:#545454;
+vertical-align:middle;
+background: #AAAAAA;
+background-image: -webkit-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -moz-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -ms-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -o-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: linear-gradient(to bottom, #AAAAAA, #4C4C4E);
+}
+
+
+/* New Button Orange */ 
+.button-orange-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#F77F00),color-stop(50%,#F77F00));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+line-height: 48px;
+text-transform:normal;
+
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+.button-orange-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#E65F04),color-stop(50%,#E65F04));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Orange */ 
+.button-orange-newtransac {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#F77F00),color-stop(50%,#F77F00));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+/*line-height: 45px;*/
+text-transform:normal;
+height:30px;
+
+font-size: 23px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 32%
+}
+
+.button-orange-newtransac:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#E65F04),color-stop(50%,#E65F04));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+/* New Button Green */ 
+.button-green-newpaymentmethod {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+text-transform:normal;
+height:40px;
+margin-top:15px;
+font-size: 20px;
+padding: 0 15px;
+
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 75%;
+}
+
+
+.button-green-newpaymentmethod:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new-pn {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 20px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new-pn:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new-rn {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new-rn:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Blue */ 
+.button-blue-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#4BB4EF;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#0072DB),color-stop(50%,#0072DB));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-blue-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#094B9A),color-stop(50%,#094B9A));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* New Button Blue */ 
+.button-blue-newtransac {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#4BB4EF;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#0072DB),color-stop(50%,#0072DB));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+/*line-height: 45px;*/
+text-transform:normal;
+height:30px;
+
+font-size: 23px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-blue-newtransac:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#094B9A),color-stop(50%,#094B9A));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* New Button Green */ 
+.button-green-newsupport {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 22px;
+padding: 0 10px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-newsupport:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* Style Title*/ 
+.title {
+font-size: 32px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #0462FF;
+}
+
+/* Style SubTitle*/ 
+.subtitle {
+font-size: 14px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #555555;
+line-height: 15px;
+}
+
+/* Style Balance-Text*/ 
+.balance-text {
+font-size: 21px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #555555;
+line-height: 10px;
+}
+
+.paymentMethodImg {
+	opacity:1.0;
+	filter:alpha(opacity=100); 
+	padding-top:10px;
+	width:40%;
+	padding-left:7px;
+}
+
+.paymentMethodImg:hover {
+	opacity:0.6;
+	filter:alpha(opacity=100); 
+}
+
+
+/* Style Balance-Number*/ 
+.balance-number {
+font-size: 25px;
+font-family: Roboto Condensed;
+font-weight: 700;
+text-transform: normal;
+color: #FF8000;
+line-height: 10px;
+}
+
+
+.welcomingTextMain {
+ color: #0462FF;
+  font-size: 30px;  
+  line-height: 1;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+}
+
+
+.welcomingTextHighlight {
+  color: #555555;
+  font-size: 13px;  
+  line-height: 1;
+  margin: 0 0 5px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+}
+
+.RingVozLetsBegin {
+	width: 100%;
+	text-align: center;
+	background-color:white;
+	
+}
+
+.RingVozWhitePage {
+	width: 100%;
+	text-align: center;
+	background-color:white;
+	height:auto;
+	 background-size: 100%;
+}
+
+.termsExplanation {
+	color:#76C8F0;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+	line-height:normal;
+}
+
+.explanationLightBlue {
+	color:#76C8F0;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+	line-height:12px;
+}
+
+.explanationDarkBlueBold {
+	color:#555555;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.transactionDetailsLbl {
+	color:#444;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+.explanationDarkBlueBoldBig {
+	color:#002CB1;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.explanationDarkBlueNormal {
+	color:#002CB1;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+}
+
+.labelDarkBlueBold {
+	color:#0096DB;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.topUpOptBtn {
+	height:70px;
+	width:80%;
+	background-color: #f7f7f7;
+	color: blue;
+	font-weight:bold;
+	font-size:15px;
+	border:none;	
+}
+
+.topUpOptBtnMenu {
+	height:40px;
+	width:100%;
+	background-color: silver;
+	color: blue;
+	font-weight:bold;
+	font-size:15px;
+	top:1px;
+}
+
+
+.myButton {
+    background-color:#0096DB;
+    border:1px solid #0096DB;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:16px;
+    padding:5px 27px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #0096DB;
+	vertical-align:middle;
+	text-align:right; 
+}
+.myButton:hover {
+    background-color:#90C72A;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+	.tripplePayTitleDiv {
+		margin-top:45px;
+	}
+	.secureTransac {
+		font-size:20px;
+		width:98%;
+		/*padding-bottom:40px;*/
+	}
+	.securePaymentDivCc1 {
+		margin-top: 50px;
+		height:60px;
+	}
+	.securePaymentDivCc2 {
+		margin-bottom:30px;
+		/*margin-top:-10px;*/
+		height:60px;
+	}	
+	.securePaymentDivCc2 img {
+		width:4%;
+		margin-top:10px;
+    }	
+    .box-home {
+      background: #ffffff;
+      background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+      background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );  
+      margin-right: 4px; 
+      margin-left: 4px; 
+      margin-bottom: 10px;
+      margin-top: 10px;
+      position: relative;
+      top: 0;
+      -webkit-transition: 1s all ease;
+      -moz-transition: 1s all ease;
+       transition: 1s all ease;
+      border-radius: 5px 5px 5px 5px;
+      border: 1px solid #BCBCBC;
+      min-height: 75px;
+      width: 97%;
+      hyphens: none;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+      text-decoration:none;
+    }
+    .box-home-enable {
+		height: 180px;
+		margin-right: 8px; 
+		margin-left: 8px; 
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 175px;		
+	}	    
+	.box-home-enable img {
+		width: 19%;
+		margin-top:  20px; 
+		margin-left: 20px;
+		margin-right: 20px;		
+	}
+	.box-home-content {
+	  margin-top:  45px; 
+	}	
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 43px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }    
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 32px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+
+	.custom-dropdown-country {
+		font-size:24px;
+	}
+	.custom-dropdown-operator {
+		font-size:24px;
+	}
+	.custom-dropdown-amount {
+		font-size:18px;
+	}
+	.custom-dropdown-cardmastercard {
+		font-size: 22px;
+		height:50px;
+		width: 98%;
+	}
+	.custom-dropdown-cardamerexpress {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-carddiscover {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-cardslist {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}	
+	.custom-dropdown-cardvisa {
+		font-size: 22px;
+		height:50px;
+	}
+	.button-green-newsupport {
+		font-size: 18px;
+	}
+	.button-green-new {
+		font-size: 18px;
+	}
+	.button-blue-new {
+		font-size: 18px;
+	}
+	.button-orange-new {
+		font-size: 18px;
+	}	
+	.custom-dropdown-ccmonthyear {
+		font-size:18px;
+		padding-left: 9px;
+	}
+	.locatorTxt {
+		font-size: 24px;
+	}	
+	
+	.tripplePayTitleTxt1 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:-10px;
+		font-weight:700;
+	}
+	.tripplePayTitleTxt2 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:0px;
+		font-weight:700;		
+	}	
+	.autoRechargeTxt1 {
+		font-size:22px;
+		margin-top:5px;
+	}
+
+	.autoRechargeTxt2 {
+		font-size:17px;
+		margin-top:15px;
+		margin-left:-248px;
+	}
+	.interTopUpTitleTxt {
+		font-size:24px;
+	}	
+	.rechargeCurrencyTxt {
+		margin-right:18px;
+		font-weight:bold;
+		color:#FB700A;
+		font-size:18px;
+	}
+	.ccAutoRechargeImg {
+		width:15%;
+	}
+	#topBlueBarId {
+		margin-top:43px;
+		height:135px;
+	}
+	#topBlueBarLbl {
+		font-size: 45px;
+		top: 25%;
+	}
+	#topBlueBarLeftIcon {
+		width:12%;
+		padding-left:10px;
+		
+		margin-top:15px;
+	}
+	#topBlueBarRightIcon {
+		width:6%;
+		padding-right:10px;
+		margin-top:25px;
+	}
+	.interTopUp_sub {
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:24px
+	}
+	.TopUpConfirmSelectedOperatorCountry2 {
+		margin-top:20px;
+		padding-bottom: 200px;
+	}		
+	.TopUpConfirmSelectedOperatorCountry2 p {
+		padding-bottom:15px;
+		color:#888888;
+		font-weight:bold;
+		font-size:30px;
+	}	
+	.TopUpConfirmSelectedOperatorCountry2 img {
+		margin-top:-10px;
+		width:16%;
+		float:right;
+		padding-right:48px;
+	}	
+	#imgSelectedOp {
+		margin-top:-30px;
+		width:18%;
+		float:right;
+		padding-right:48px;
+	}
+	#imgSelectedCountry {
+		margin-top:-40px;
+		width:19%;
+		float:right;
+		padding-right:48px;
+	}
+	.paymentOptsImg img {
+		opacity:1.0;
+		filter:alpha(opacity=100); 
+		padding-top:10px;
+		width:38%;
+		padding-left:7px;	
+	}
+	#tb {
+		height:75px;
+		background-image: url(../images/topOrangeBackground.jpg);
+		background-color:transparent;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	#topOrangeBarImg {
+		padding-bottom:10px;
+		width:45%;
+	}
+	
+	.tab-bar__label {
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 25px;
+	}
+	.tab-bar__icon + .tab-bar__label {
+	  font-size: 25px;
+	  line-height: 1;
+	  margin: 0;
+	  font-weight: 400;
+	}
+	.tab-bar__button {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 45px;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-background-clip: padding-box;
+	  background-clip: padding-box;
+	  padding: 0;
+	  margin: 0;
+	  font: inherit;
+	  color: inherit;
+	  background: transparent;
+	  border: none;
+	  line-height: normal;
+	  cursor: default;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-decoration: none;
+	  padding: 0;
+	  height: 75px;
+	  letter-spacing: 0;
+	  color: #999;
+	  text-shadow: 0 1px none;
+	  vertical-align: top;
+	  background-color: transparent;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  border-top: none;
+	  width: 100%;
+	  font-weight: 400;
+	  line-height: 75px;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	}	
+	.MySettingsGrayBox p {
+		/*padding-top:10px;
+		padding-left:5px;
+		color:#002CB1;
+		font-weight:bold;*/
+		font-size:18px;
+	}
+	.MySettingsGrayBox label {
+		font-size: 28px;
+	}	
+	#interTopUpAmount {
+		margin-top:10px;
+		margin-left:10px;
+		float:left;
+	}
+	#rechargeAmount {
+		margin-top:105px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:11px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.RechargeCreditCardMoreQty {
+		margin-left:10px;
+		margin-right:10px;
+		margin-bottom:50px;
+		margin-top:100px;
+		height:130px;
+	}	
+	#rechargeCcTitle {
+		margin-top:20px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:18px;
+		font-weight:700;
+		color:#666666;
+	}
+	#rechargeCcValueTitle {
+		margin-top:-5px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:20px;
+	}
+	.custom-activate-autorecharge {
+		margin-top:30px;
+		width:110px;
+		margin-right:30px;
+	}	
+
+	.autoRechargeWhenBalanceLowDiv {
+		padding-left:20px;
+		text-align:left;
+		margin-top:55px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:20px;
+		font-weight:700;
+		color:#666666;
+		margin-bottom:20px;
+	}
+	.RechargeCreditCardMoreQty2 {
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:15px;
+	}	
+	.autoRechargeOnOffLbl {
+		margin-top:3px;
+		margin-right:6px;
+		font-size:26px;
+		padding-left:4px;
+		float:left;
+	}
+	.custom-dropdown-moreqty {
+		margin-top:38px;
+		height:48px;
+	}
+
+    .isTablet {
+        display: none;
+    }
+    
+
+
+	
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* loading end */
+
+/* Button Round */
+input#biground{
+width:100px; /*same as the height*/
+height:100px; /*same as the width*/
+background-image: -webkit-linear-gradient(top, #90C72A,  #438B00);
+background-image: -moz-linear-gradient(top, #90C72A,  #438B00);
+background-image: -ms-linear-gradient(top, #90C72A,  #438B00);
+background-image: -o-linear-gradient(top, #90C72A,  #438B00);	
+border:2px solid white; /*same colour as the background*/
+color:#fff;
+font-size:0.9em;
+text-transform:uppercase;
+cursor: pointer;
+font-weight: bold;
+word-wrap: break-word;
+/*set the border-radius at half the size of the width and height*/
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+/*give the button a small drop shadow*/
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+
+.round-button {
+	width:48%;
+}
+.round-button-circle {
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+	border:5px solid #1d7200;
+    overflow:hidden;
+    
+  
+	background-image: -webkit-linear-gradient(top, #90C72A,  #438B00);
+background-image: -moz-linear-gradient(top, #90C72A,  #438B00);
+background-image: -ms-linear-gradient(top, #90C72A,  #438B00);
+background-image: -o-linear-gradient(top, #90C72A,  #438B00);	
+border:2px solid white; /*same colour as the background*/
+
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+.round-button-circle:hover {
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+.round-button a {
+    display:block;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+    text-transform:uppercase;
+	text-align:center;
+	color:white;
+    font-family: 'Ek Mukta', sans-serif;
+    font-size:2.0em;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    text-shadow: 0 -2px 0 #999;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+    margin: 200px 0 30px 0;
+    color: white;
+}
+
+/**
+ * Large Button Component
+ * http://components.onsenui.io/
+ */
+.button--large {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  padding: 4px 20px;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 1px none;
+  vertical-align: middle;
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 4px 20px;
+  display: block;
+  width: 100%;
+}
+.button--large:active {
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.6;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.button--large:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+
+.MySettingsGrayBox p {
+	padding-top:10px;
+	padding-left:5px;
+	color:#002CB1;
+	font-weight:bold;
+	font-size:14px;
+}
+
+.interTopUp_sub {
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:10px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-size:14px
+}
+
+#imgSelectedCountry {
+	margin-top:-20px;
+	width:20%;
+	float:right;
+	padding-right:48px;
+}	
+
+#imgSelectedOp {
+	margin-top:-15px;
+	width:20%;
+	float:right;
+	padding-right:48px;
+}
+
+#rechargeAmount {
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:11px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-si
+	ze:15px;
+}
+
+#rechargeCcTitle {
+	margin-top:-5px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-size:14px;
+	font-weight:700;
+	color:#666666;
+}
+
+#rechargeCcValueTitle {
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:10px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-size:15px;
+}
+
+.securePaymentDivCc1 {
+	width:94%;
+}
+
+.securePaymentDivCc2 {
+	border-radius:4px;
+	position:relative;
+	margin-bottom:10px;
+	margin-top:-10px;
+	height:27px;
+	background-color:#e1dfe2;
+}	
+
+.securePaymentDivCc2 img {
+	width:4%;
+	margin-top:5px;
+}		
+
+.autoRechargeWhenBalanceLowDiv {
+	padding-left:10px;
+	text-align:left;
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-size:14px;
+	font-weight:700;
+	color:#666666;
+}
+
+.autoRechargeOnOffLbl {
+	margin-top:3px;
+	margin-right:6px;
+	font-size:22px;
+	padding-left:4px;
+	float:left;
+}
+
+.tripplePayTitleDiv {
+	margin-top:5px;
+}
+/*
+@import url(smallDevices.css) only screen
+and (min-width:320px )
+and (max-width: 568px )
+and ( orientation: portrait );
+
+@import url('smallDevices.css') only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait);
+  */
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+
+@media only screen 
+  /*and (min-device-width: 320px) */
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait)*/ {
+
+    .isTablet {
+        display: inline-block;
+    }
+    
+    .DirectDialMainDiv img {
+        width: 60%;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }   
+    
+    .TopBlueBarTitle {
+        text-transform:normal;
+        width:100%;
+        border:0px solid white;
+        padding-left:0px;
+        text-align:center;
+        color:white;
+        margin-top:-8px;
+        height:55px;
+        background: #339dff;
+        background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+        background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+        background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+        background-image: -o-linear-gradient(top, #339dff, #1060bf);
+        background-image: linear-gradient(to bottom, #339dff, #1060bf);
+    }
+    #topBlueBarId {
+		margin-top:-20px;
+		height:55px;
+	}
+	#topBlueBarLbl {
+		font-size: 18px;
+		top: 25%;
+	}
+	#topBlueBarLeftIcon {
+		width:12%;
+		padding-left:10px;
+		
+		margin-top:10px;
+	}
+	#topBlueBarRightIcon {
+		width:6%;
+		padding-right:10px;
+		margin-top:18px;
+	}
+    .TopBlueBarTitle img {
+        z-index:1000;
+    	
+    }
+    #tb {
+		height:75px;
+		background-image: url(../images/topOrangeBackground.jpg);
+		background-color:transparent;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+    #topOrangeBarImg {
+		padding-bottom:5px;
+		width:52%;
+	}
+    .TopBlueBarTitle label {
+    	text-align: center;
+        position: relative;
+        top: 10%;
+    	left:0%;
+     
+    }
+    
+    .TopBlueBarTitleTransacDetails {
+    text-transform:normal;
+    width:100%;
+    border:0px solid white;
+    padding-left:0px;
+    text-align:center;
+    height:55px;
+    vertical-align:middle;
+    color:white;
+    font-family: 'Ek Mukta', sans-serif;
+    background: #339dff;
+    background-image: -webkit-linear-gradient(top, #339dff, #1060bf) !important;
+    background-image: -moz-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: -ms-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: -o-linear-gradient(top, #339dff, #1060bf)  !important;
+    background-image: linear-gradient(to bottom, #339dff, #1060bf)  !important;
+    }    
+    .topUpOptBtn {
+        height:70px;
+        width:80%;
+    	background-color: #f7f7f7;
+    	color: blue;
+    	font-weight:bold;
+    	font-size:15px;
+    	border:none;	
+    }
+    
+    .topUpOptBtnMenu {
+    	height:40px;
+    	width:100%;
+    	background-color: silver;
+    	color: blue;
+    	font-weight:bold;
+    	font-size:15px;
+    	top:1px;
+    }
+    .box-home-enable {
+      background: #ffffff;
+      background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+      background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );  
+        height: 80px;
+		margin-right: 8px; 
+		margin-left: 8px; 
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 80px;		
+      position: relative;
+      top: 0;
+      -webkit-transition: 1s all ease;
+      -moz-transition: 1s all ease;
+       transition: 1s all ease;
+      border-radius: 5px 5px 5px 5px;
+      border: 1px solid #BCBCBC;
+      width: 94%;
+      hyphens: none;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+      text-decoration:none;
+    }    
+    .box-home-content {
+	  margin-top:  15px; 
+	}	
+	.box-home-enable img {
+		width: 19%;
+		margin-top:  15px; 
+		margin-left: 15px;
+		margin-right: 5px;		
+	}
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 43px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }    
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 32px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+
+    .box-home-enable a {
+      text-decoration:none;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+
+	.tripplePayTitleDiv {
+		margin-top:5px;
+	}
+	.secureTransac {
+		font-size:9px;
+		width:96%;
+	}
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 20px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }        
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 13px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+    .custom-dropdown-accessnumber {
+		font-size:22px;
+        width: 80%;
+	}
+	.custom-dropdown-country {
+		font-size:22px;
+	}
+	.custom-dropdown-operator {
+		font-size:22px;
+	}
+	.custom-dropdown-amount {
+		font-size:15px;
+	}
+	.custom-dropdown-cardmastercard {
+		font-size: 17px;
+	}
+	.custom-dropdown-cardamerexpress {
+		font-size: 17px;
+	}
+	.custom-dropdown-carddiscover {
+		font-size: 17px;
+	}
+	.custom-dropdown-cardslist {
+		font-size: 17px;
+	}	
+	.custom-dropdown-cardvisa {
+		font-size: 17px;	
+	}
+	.button-green-newsupport {
+		font-size: 16px;
+	}
+	.button-green-new {
+		font-size: 16px;
+	}
+	.button-green-new-rn {
+		font-size: 2px;
+	}
+	.button-blue-new {
+		font-size: 16px;
+	}
+	.button-orange-new {
+		font-size: 16px;
+	}	
+	.custom-dropdown-ccmonthyear {
+		font-size:16px;
+		padding-left: 7px;
+	}
+	.locatorTxt {
+		font-size: 12px;
+	}	
+	.tripplePayTitleTxt1 {
+		font-size: 13px;
+		padding-left:140px;
+	}
+	.tripplePayTitleTxt2 {
+		font-size: 13px;
+		padding-left:140px;
+	}	
+	.autoRechargeTxt1 {
+		font-size:15px;
+	}
+
+	.autoRechargeTxt2 {
+		font-size:10px;
+	}
+	.interTopUpTitleTxt {
+		font-size:12px;
+	}	
+	.rechargeCurrencyTxt {
+		margin-right:15px;
+		font-weight:bold;
+		color:#FB700A;
+		font-size:16px;
+	}
+	.ccAutoRechargeImg {
+		width:13%;
+	}  
+	
+	.tab-bar {
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 17px;
+	  display: table;
+	  table-layout: fixed;
+	  position: absolute;
+	  bottom: 0px;
+	  left: 0px;
+	  right: 0px;
+	  white-space: nowrap;
+	  margin: 0;
+	  padding: 0;
+	  height: 49px;
+	 
+	background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+	background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+	background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+	background-image: -o-linear-gradient(top, #339dff, #1060bf);
+	background-image: linear-gradient(to bottom, #339dff, #1060bf);
+	  border-top: 1px solid rgba(0,0,0,.0);
+	  width: 100%;
+	}
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	  .tab-bar {
+		border-top: none;
+		-webkit-background-size: 100% 1px;
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		background-position: top;
+
+	background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+	background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+	background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+	background-image: -o-linear-gradient(top, #339dff, #1060bf);
+	background-image: linear-gradient(to bottom, #339dff, #1060bf);
+	  }
+	}
+	.tab-bar__item {
+	  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 17px;
+	  position: relative;
+	  overflow: hidden;
+	  display: table-cell;
+	  width: auto;
+	  -webkit-border-radius: 0;
+	  border-radius: 0;
+	}
+	.tab-bar__item > input {
+	  position: absolute;
+	  overflow: hidden;
+	  right: 0px;
+	  top: 0px;
+	  left: 0px;
+	  bottom: 0px;
+	  padding: 0;
+	  border: 0;
+	  opacity: 0.001;
+	  z-index: 1;
+	  vertical-align: top;
+	  outline: none;
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  -webkit-appearance: none;
+	  appearance: none;
+	}
+	.tab-bar__button {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 177px;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-background-clip: padding-box;
+	  background-clip: padding-box;
+	  padding: 0;
+	  margin: 0;
+	  font: inherit;
+	  color: inherit;
+	  background: transparent;
+	  border: none;
+	  line-height: normal;
+	  cursor: default;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-decoration: none;
+	  padding: 0;
+	  height: 49px;
+	  letter-spacing: 0;
+	  color: #999;
+	  text-shadow: 0 1px none;
+	  vertical-align: top;
+	  background-color: transparent;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  border-top: none;
+	  width: 100%;
+	  font-weight: 400;
+	  line-height: 49px;
+	  text-shadow: 1px 1px 2px #333;
+	}
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	  .tab-bar__button {
+		border-top: none;
+	  }
+	}
+	.tab-bar__icon {
+	  font-size: 24px;
+	  padding: 0;
+	  margin: 0;
+	  line-height: 32px;
+	  display: block;
+	  height: 32px;
+	}
+	.tab-bar__label {
+	  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 17px;
+	}
+	.tab-bar__icon + .tab-bar__label {
+	  font-size: 10px;
+	  line-height: 1;
+	  margin: 0;
+	  font-weight: 400;
+	}
+	.tab-bar__label:first-child {
+	  font-size: 16px;
+	  line-height: 49px;
+	  margin: 0;
+	  padding: 0;
+	}
+	.tab-bar__button {
+	  color: #fff;
+	}
+	:checked + .tab-bar__button {
+	  color: #A3D900;
+	/*  background-color: transparent; */
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  border-top: none;
+	}
+	:checked + .tab-bar__button > .tab-bar__icon {
+	  color: #A3D900;
+	}
+	.tab-bar__button:disabled {
+	  opacity: 0.3;
+	  cursor: default;
+	  pointer-events: none;
+	}
+	.tab-bar__button:focus {
+	  z-index: 1;
+	  border-top: none;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  outline: 0;
+	}
+	.tab-bar__content {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 49px;
+	  z-index: 0;
+	}	
+}
+
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+/* Portrait and Landscape */
+@media (max-width: 1280px) {
+      
+/* Style Select-box*/ 
+
+    .isTablet {
+        display: flex;
+    }
+    .secureTransac {
+		font-size:20px;
+		width:98%;
+		/*padding-bottom:40px;*/
+	}
+	.securePaymentDivCc1 {
+		margin-top: 50px;
+		height:60px;
+	}
+	.securePaymentDivCc2 {
+		margin-bottom:30px;
+		/*margin-top:-10px;*/
+		height:60px;
+	}	
+	.securePaymentDivCc2 img {
+		width:4%;
+		margin-top:10px;
+	}		
+	.box-home-enable img {
+		width: 19%;
+		margin-top:  20px; 
+		margin-left: 20px;
+		margin-right: 20px;		
+	}
+	.box-home-content {
+	  margin-top:  45px; 
+	}	
+	.box-home-enable {
+		height: 180px;
+		margin-right: 8px; 
+		margin-left: 8px; 
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 175px;		
+	}	
+	.box-home-enable h3 {
+		font-size: 43px;
+	}
+	.box-home-enable h4 {
+		font-size: 32px;
+	}	
+	.custom-dropdown-country {
+		font-size:24px;
+	}
+	.custom-dropdown-operator {
+		font-size:24px;
+	}
+	.custom-dropdown-amount {
+		font-size:18px;
+	}
+	.custom-dropdown-cardmastercard {
+		font-size: 22px;
+		height:50px;
+		width: 98%;
+	}
+	.custom-dropdown-cardamerexpress {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-carddiscover {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-cardslist {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}	
+	.custom-dropdown-cardvisa {
+		font-size: 22px;
+		height:50px;
+	}
+	.button-green-newsupport {
+		font-size: 18px;
+	}
+	.button-green-new {
+		font-size: 18px;
+	}
+	.button-blue-new {
+		font-size: 18px;
+	}
+	.button-orange-new {
+		font-size: 18px;
+	}	
+	.custom-dropdown-ccmonthyear {
+		font-size:18px;
+		padding-left: 9px;
+	}
+	.locatorTxt {
+		font-size: 24px;
+	}	
+	
+	.tripplePayTitleTxt1 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:-10px;
+		font-weight:700;
+	}
+	.tripplePayTitleTxt2 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:0px;
+		font-weight:700;		
+	}	
+	.autoRechargeTxt1 {
+		font-size:22px;
+		margin-top:5px;
+	}
+
+	.autoRechargeTxt2 {
+		font-size:17px;
+		margin-top:15px;
+		margin-left:-248px;
+	}
+	.interTopUpTitleTxt {
+		font-size:24px;
+	}	
+	.rechargeCurrencyTxt {
+		margin-right:18px;
+		font-weight:bold;
+		color:#FB700A;
+		font-size:18px;
+	}
+	.ccAutoRechargeImg {
+		width:15%;
+	}
+	#topBlueBarId {
+		margin-top:43px;
+		height:135px;
+	}
+	#topBlueBarLbl {
+		font-size: 45px;
+		top: 25%;
+	}
+	#topBlueBarLeftIcon {
+		width:12%;
+		padding-left:10px;
+		
+		margin-top:15px;
+	}
+	#topBlueBarRightIcon {
+		width:6%;
+		padding-right:10px;
+		margin-top:25px;
+	}
+	.interTopUp_sub {
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:24px
+	}
+	.TopUpConfirmSelectedOperatorCountry2 {
+		margin-top:20px;
+		padding-bottom: 200px;
+	}		
+	.TopUpConfirmSelectedOperatorCountry2 p {
+		padding-bottom:15px;
+		color:#888888;
+		font-weight:bold;
+		font-size:30px;
+	}	
+	.TopUpConfirmSelectedOperatorCountry2 img {
+		margin-top:-10px;
+		width:16%;
+		float:right;
+		padding-right:48px;
+	}	
+	#imgSelectedOp {
+		margin-top:-30px;
+		width:18%;
+		float:right;
+		padding-right:48px;
+	}
+	#imgSelectedCountry {
+		margin-top:-40px;
+		width:19%;
+		float:right;
+		padding-right:48px;
+	}
+	.paymentOptsImg img {
+		opacity:1.0;
+		filter:alpha(opacity=100); 
+		padding-top:10px;
+		width:38%;
+		padding-left:7px;	
+	}
+	#tb {
+		height:120px;
+	}
+	#topOrangeBarImg {
+		padding-bottom:10px;
+		width:45%;
+	}
+	
+	.tab-bar__label {
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 25px;
+	}
+	.tab-bar__icon + .tab-bar__label {
+	  font-size: 25px;
+	  line-height: 1;
+	  margin: 0;
+	  font-weight: 400;
+	}
+	.tab-bar__button {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 45px;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-background-clip: padding-box;
+	  background-clip: padding-box;
+	  padding: 0;
+	  margin: 0;
+	  font: inherit;
+	  color: inherit;
+	  background: transparent;
+	  border: none;
+	  line-height: normal;
+	  cursor: default;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-decoration: none;
+	  padding: 0;
+	  height: 75px;
+	  letter-spacing: 0;
+	  color: #999;
+	  text-shadow: 0 1px none;
+	  vertical-align: top;
+	  background-color: transparent;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  border-top: none;
+	  width: 100%;
+	  font-weight: 400;
+	  line-height: 75px;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	}	
+	.MySettingsGrayBox p {
+		/*padding-top:10px;
+		padding-left:5px;
+		color:#002CB1;
+		font-weight:bold;*/
+		font-size:18px;
+	}
+	.MySettingsGrayBox label {
+		font-size: 28px;
+	}	
+	#interTopUpAmount {
+		margin-top:10px;
+		margin-left:10px;
+		float:left;
+	}
+	#rechargeAmount {
+		margin-top:105px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:11px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.RechargeCreditCardMoreQty {
+		margin-left:10px;
+		margin-right:10px;
+		margin-bottom:50px;
+		margin-top:100px;
+		height:130px;
+	}	
+	#rechargeCcTitle {
+		margin-top:20px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:18px;
+		font-weight:700;
+		color:#666666;
+	}
+	#rechargeCcValueTitle {
+		margin-top:-5px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:20px;
+	}
+	.custom-activate-autorecharge {
+		margin-top:30px;
+		width:110px;
+		margin-right:30px;
+	}	
+
+	.autoRechargeWhenBalanceLowDiv {
+		padding-left:20px;
+		text-align:left;
+		margin-top:55px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:20px;
+		font-weight:700;
+		color:#666666;
+		margin-bottom:20px;
+	}
+	.RechargeCreditCardMoreQty2 {
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:15px;
+	}	
+	.autoRechargeOnOffLbl {
+		margin-top:3px;
+		margin-right:6px;
+		font-size:26px;
+		padding-left:4px;
+		float:left;
+	}
+	.custom-dropdown-moreqty {
+		margin-top:38px;
+		height:48px;
+	}
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+      
+/* Coverloading-text*/ 
+.cover-text {
+
+}
+
+.cover-text h1 {
+  color: #0060FF;
+  font-size: 27px;  
+  line-height: 1;
+ /* margin: 0 0 10px;*/
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cover-text h2 {
+  color: #002CB1;
+  font-size: 27px;  
+  line-height: 1;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/* Styles Header*/ 
+.header {
+    line-height:100%;
+ display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center; 
+  border: none;  
+  min-height: 60px;
+  font-size: 26px;
+
+  width: 99%;
+  color: #fff;
+  background-color: #F00;
+  border: 0px solid #FFC926;
+  background-image: -ms-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFC926), to(#FB6D0C));
+  background-image: -webkit-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -o-linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: linear-gradient(top, #FFC926, #FB6D0C);
+  background-image: -moz-linear-gradient(top, #FFC926, #FB6D0C); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');  
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);  */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFC926',endColorstr='#FB6D0C',GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);  
+}
+.center label {
+  font-family: 'Ek Mukta';
+  font-weight: 700;
+	display: inline-block;
+  color: #fff;
+  font-size: 24px;
+
+  top: 15px;
+  vertical-align: middle;
+}
+.header h1 {
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+
+.header h2 {
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 400;
+  text-transform: normal;
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.RingVozConnectYou {
+    width: 100%;
+	text-align: center;
+	background-image: url("../images/fondo_general.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozSupport {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/support.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozConnectYouNew {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/index.jpg");
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozConnectYouNewEn {
+	width: 100%;
+	text-align: center;
+	background-image: url("../images/index_en.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.Oops {
+	width: 100%;
+	text-align: center;
+	text-transform:uppercase;
+     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.RingVozFiveStars {
+	width: 60%;
+}
+
+.TopBlueBarTitle {
+text-transform:normal;
+width:100%;
+border:0px solid white;
+padding-left:0px;
+text-align:center;
+color:white;
+margin-top:-8px;
+height:55px;
+background: #339dff;
+background-image: -webkit-linear-gradient(top, #339dff, #1060bf);
+background-image: -moz-linear-gradient(top, #339dff, #1060bf);
+background-image: -ms-linear-gradient(top, #339dff, #1060bf);
+background-image: -o-linear-gradient(top, #339dff, #1060bf);
+background-image: linear-gradient(to bottom, #339dff, #1060bf);
+}
+
+.TopBlueBarTitle img {
+	z-index:1000;
+	
+}
+
+.TopBlueBarTitle label {
+	text-align: center;
+    position: relative;
+    top: 16%;
+	left:0%;
+ 
+}
+
+.TopBlueBarTitleTransacDetails {
+text-transform:normal;
+width:100%;
+border:0px solid white;
+padding-left:0px;
+text-align:center;
+height:55px;
+vertical-align:middle;
+color:white;
+font-family: 'Ek Mukta', sans-serif;
+background: #339dff;
+background-image: -webkit-linear-gradient(top, #339dff, #1060bf) !important;
+background-image: -moz-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: -ms-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: -o-linear-gradient(top, #339dff, #1060bf)  !important;
+background-image: linear-gradient(to bottom, #339dff, #1060bf)  !important;
+}
+
+
+.TopUpConfirmSelectedOperatorCountry {
+    
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.RechargeCreditCardMoreQty {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-bottom:15px;
+	margin-bottom:10px;
+	margin-top:-25px;
+}
+
+.RechargeCreditCardMoreQty2 {
+	
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:-8px;
+}
+
+.TopUpConfirmSelectedOperatorCountry2 {
+	
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	height:150px;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.DirectDialMainDiv {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	height: auto;
+	border-radius:7px;
+    margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.MySettingsGrayBox {
+	background-color:#eeeeee;
+	border: 1px solid #DCDCD8;
+	font-family: 'Ek Mukta', sans-serif;
+	border-radius:7px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.homePageBalance {
+height:34px;
+background-color:#545454;
+vertical-align:middle;
+background: #AAAAAA;
+background-image: -webkit-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -moz-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -ms-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: -o-linear-gradient(top, #AAAAAA, #4C4C4E);
+background-image: linear-gradient(to bottom, #AAAAAA, #4C4C4E);
+}
+
+
+/* New Button Orange */ 
+.button-orange-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#F77F00),color-stop(50%,#F77F00));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+line-height: 48px;
+text-transform:normal;
+
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+.button-orange-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#E65F04),color-stop(50%,#E65F04));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Orange */ 
+.button-orange-newtransac {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #F77F00 60%,#F77F00 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#F77F00),color-stop(50%,#F77F00));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+/*line-height: 45px;*/
+text-transform:normal;
+height:30px;
+
+font-size: 23px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 32%
+}
+
+.button-orange-newtransac:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-o-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-ms-linear-gradient(top, #FFC612 25%, #E65F04 70%,#E65F04 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#FFC612), color-stop(60%,#E65F04),color-stop(50%,#E65F04));
+box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #B22D00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+/* New Button Green */ 
+.button-green-newpaymentmethod {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+text-transform:normal;
+height:40px;
+margin-top:15px;
+font-size: 20px;
+padding: 0 15px;
+
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 75%;
+}
+
+
+.button-green-newpaymentmethod:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new-pn {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 20px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new-pn:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Green */ 
+.button-green-new-rn {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-new-rn:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+/* New Button Blue */ 
+.button-blue-new {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#4BB4EF;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#0072DB),color-stop(50%,#0072DB));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 27px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-blue-new:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#094B9A),color-stop(50%,#094B9A));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* New Button Blue */ 
+.button-blue-newtransac {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#4BB4EF;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #0072DB 60%,#0072DB 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#0072DB),color-stop(50%,#0072DB));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+/*line-height: 45px;*/
+text-transform:normal;
+height:30px;
+
+font-size: 23px;
+padding: 0 15px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-blue-newtransac:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-o-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-ms-linear-gradient(top, #4BB4EF 25%, #094B9A 70%,#094B9A 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#4BB4EF), color-stop(60%,#094B9A),color-stop(50%,#094B9A));
+box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #004789,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* New Button Green */ 
+.button-green-newsupport {
+display: inline-block;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: middle;
+text-decoration: none;
+text-align: center;
+border: none;
+color: #fff;
+background-color:#8BC329;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3D8700 60%,#3D8700 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3D8700),color-stop(50%,#3D8700));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+line-height: 48px;
+min-height: 45px;
+font-size: 22px;
+padding: 0 10px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+width: 180px;
+}
+
+
+.button-green-newsupport:hover
+{
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+
+
+
+/* Style Title*/ 
+.title {
+font-size: 32px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #0462FF;
+}
+
+/* Style SubTitle*/ 
+.subtitle {
+font-size: 14px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #555555;
+line-height: 15px;
+}
+
+/* Style Balance-Text*/ 
+.balance-text {
+font-size: 21px;
+font-family: 'Ek Mukta', sans-serif;
+font-weight: 700;
+text-transform: normal;
+color: #555555;
+line-height: 10px;
+}
+
+.paymentMethodImg {
+	opacity:1.0;
+	filter:alpha(opacity=100); 
+	padding-top:10px;
+	width:40%;
+	padding-left:7px;
+}
+
+.paymentMethodImg:hover {
+	opacity:0.6;
+	filter:alpha(opacity=100); 
+}
+
+
+/* Style Balance-Number*/ 
+.balance-number {
+font-size: 25px;
+font-family: Roboto Condensed;
+font-weight: 700;
+text-transform: normal;
+color: #FF8000;
+line-height: 10px;
+}
+
+
+.welcomingTextMain {
+ color: #0462FF;
+  font-size: 30px;  
+  line-height: 1;
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+}
+
+
+.welcomingTextHighlight {
+  color: #555555;
+  font-size: 13px;  
+  line-height: 1;
+  margin: 0 0 5px;
+  text-align: center;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 700;
+}
+
+.RingVozLetsBegin {
+	width: 100%;
+	text-align: center;
+	background-color:white;
+	
+}
+
+.RingVozWhitePage {
+	width: 100%;
+	text-align: center;
+	background-color:white;
+	height:auto;
+	 background-size: 100%;
+}
+
+.termsExplanation {
+	color:#76C8F0;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+	line-height:normal;
+}
+
+.explanationLightBlue {
+	color:#76C8F0;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+	line-height:12px;
+}
+
+.explanationDarkBlueBold {
+	color:#555555;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.transactionDetailsLbl {
+	color:#444;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+.explanationDarkBlueBoldBig {
+	color:#002CB1;
+	font-size: 14px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.explanationDarkBlueNormal {
+	color:#002CB1;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: normal;
+}
+
+.labelDarkBlueBold {
+	color:#0096DB;
+	font-size: 12px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: bold;
+}
+
+.topUpOptBtn {
+	height:70px;
+	width:80%;
+	background-color: #f7f7f7;
+	color: blue;
+	font-weight:bold;
+	font-size:15px;
+	border:none;	
+}
+
+.topUpOptBtnMenu {
+	height:40px;
+	width:100%;
+	background-color: silver;
+	color: blue;
+	font-weight:bold;
+	font-size:15px;
+	top:1px;
+}
+
+
+.myButton {
+    background-color:#0096DB;
+    border:1px solid #0096DB;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:16px;
+    padding:5px 27px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #0096DB;
+	vertical-align:middle;
+	text-align:right; 
+}
+.myButton:hover {
+    background-color:#90C72A;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+	.tripplePayTitleDiv {
+		margin-top:45px;
+	}
+	.secureTransac {
+		font-size:20px;
+		width:98%;
+		/*padding-bottom:40px;*/
+	}
+	.securePaymentDivCc1 {
+		margin-top: 50px;
+		height:60px;
+	}
+	.securePaymentDivCc2 {
+		margin-bottom:30px;
+		/*margin-top:-10px;*/
+		height:60px;
+	}	
+	.securePaymentDivCc2 img {
+		width:4%;
+		margin-top:10px;
+    }	
+    .box-home {
+      background: #ffffff;
+      background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+      background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%);
+      background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );  
+      margin-right: 4px; 
+      margin-left: 4px; 
+      margin-bottom: 10px;
+      margin-top: 10px;
+      position: relative;
+      top: 0;
+      -webkit-transition: 1s all ease;
+      -moz-transition: 1s all ease;
+       transition: 1s all ease;
+      border-radius: 5px 5px 5px 5px;
+      border: 1px solid #BCBCBC;
+      min-height: 75px;
+      width: 97%;
+      hyphens: none;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+      text-decoration:none;
+    }
+    .box-home-enable {
+		height: 180px;
+		margin-right: 8px; 
+		margin-left: 8px; 
+		margin-bottom: 20px;
+		margin-top: 20px;
+		min-height: 175px;		
+	}	    
+	.box-home-enable img {
+		width: 19%;
+		margin-top:  20px; 
+		margin-left: 20px;
+		margin-right: 20px;		
+	}
+	.box-home-content {
+	  margin-top:  45px; 
+	}	
+    .box-home-enable h3 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 43px;
+      color: #666666; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;
+      margin: 0;
+      vertical-align: middle;
+    }    
+    .box-home-enable h4 {
+      font-family: 'Ek Mukta', sans-serif;
+      font-size: 32px;
+      color: #777777; 
+      font-weight: 700;
+      text-decoration:none;
+      text-align: left;  
+      vertical-align: middle;
+      margin: 0;
+      line-height:12px;
+    }
+
+	.custom-dropdown-country {
+		font-size:24px;
+	}
+	.custom-dropdown-operator {
+		font-size:24px;
+	}
+	.custom-dropdown-amount {
+		font-size:18px;
+	}
+	.custom-dropdown-cardmastercard {
+		font-size: 22px;
+		height:50px;
+		width: 98%;
+	}
+	.custom-dropdown-cardamerexpress {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-carddiscover {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}
+	.custom-dropdown-cardslist {
+		font-size: 22px;
+		height:50px;
+		width: 98%;		
+	}	
+	.custom-dropdown-cardvisa {
+		font-size: 22px;
+		height:50px;
+	}
+	.button-green-newsupport {
+		font-size: 18px;
+	}
+	.button-green-new {
+		font-size: 18px;
+	}
+	.button-blue-new {
+		font-size: 18px;
+	}
+	.button-orange-new {
+		font-size: 18px;
+	}	
+	.custom-dropdown-ccmonthyear {
+		font-size:18px;
+		padding-left: 9px;
+	}
+	.locatorTxt {
+		font-size: 24px;
+	}	
+	
+	.tripplePayTitleTxt1 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:-10px;
+		font-weight:700;
+	}
+	.tripplePayTitleTxt2 {
+		font-size: 28px;
+		padding-left:70px;
+		margin-top:0px;
+		font-weight:700;		
+	}	
+	.autoRechargeTxt1 {
+		font-size:22px;
+		margin-top:5px;
+	}
+
+	.autoRechargeTxt2 {
+		font-size:17px;
+		margin-top:15px;
+		margin-left:-248px;
+	}
+	.interTopUpTitleTxt {
+		font-size:24px;
+	}	
+	.rechargeCurrencyTxt {
+		margin-right:18px;
+		font-weight:bold;
+		color:#FB700A;
+		font-size:18px;
+	}
+	.ccAutoRechargeImg {
+		width:15%;
+	}
+	#topBlueBarId {
+		margin-top:43px;
+		height:135px;
+	}
+	#topBlueBarLbl {
+		font-size: 45px;
+		top: 25%;
+	}
+	#topBlueBarLeftIcon {
+		width:12%;
+		padding-left:10px;
+		
+		margin-top:15px;
+	}
+	#topBlueBarRightIcon {
+		width:6%;
+		padding-right:10px;
+		margin-top:25px;
+	}
+	.interTopUp_sub {
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:24px
+	}
+	.TopUpConfirmSelectedOperatorCountry2 {
+		margin-top:20px;
+		padding-bottom: 200px;
+	}		
+	.TopUpConfirmSelectedOperatorCountry2 p {
+		padding-bottom:15px;
+		color:#888888;
+		font-weight:bold;
+		font-size:30px;
+	}	
+	.TopUpConfirmSelectedOperatorCountry2 img {
+		margin-top:-10px;
+		width:16%;
+		float:right;
+		padding-right:48px;
+	}	
+	#imgSelectedOp {
+		margin-top:-30px;
+		width:18%;
+		float:right;
+		padding-right:48px;
+	}
+	#imgSelectedCountry {
+		margin-top:-40px;
+		width:19%;
+		float:right;
+		padding-right:48px;
+	}
+	.paymentOptsImg img {
+		opacity:1.0;
+		filter:alpha(opacity=100); 
+		padding-top:10px;
+		width:38%;
+		padding-left:7px;	
+	}
+	#tb {
+		height:75px;
+		background-image: url(../images/topOrangeBackground.jpg);
+		background-color:transparent;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	#topOrangeBarImg {
+		padding-bottom:10px;
+		width:45%;
+	}
+	
+	.tab-bar__label {
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 25px;
+	}
+	.tab-bar__icon + .tab-bar__label {
+	  font-size: 25px;
+	  line-height: 1;
+	  margin: 0;
+	  font-weight: 400;
+	}
+	.tab-bar__button {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: top;
+	  font-family: 'Ek Mukta', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  font-weight: 400;
+	  font-size: 45px;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-background-clip: padding-box;
+	  background-clip: padding-box;
+	  padding: 0;
+	  margin: 0;
+	  font: inherit;
+	  color: inherit;
+	  background: transparent;
+	  border: none;
+	  line-height: normal;
+	  cursor: default;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-decoration: none;
+	  padding: 0;
+	  height: 75px;
+	  letter-spacing: 0;
+	  color: #999;
+	  text-shadow: 0 1px none;
+	  vertical-align: top;
+	  background-color: transparent;
+	  -webkit-box-shadow: none;
+	  box-shadow: none;
+	  border-top: none;
+	  width: 100%;
+	  font-weight: 400;
+	  line-height: 75px;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	}	
+	.MySettingsGrayBox p {
+		/*padding-top:10px;
+		padding-left:5px;
+		color:#002CB1;
+		font-weight:bold;*/
+		font-size:18px;
+	}
+	.MySettingsGrayBox label {
+		font-size: 28px;
+	}	
+	#interTopUpAmount {
+		margin-top:10px;
+		margin-left:10px;
+		float:left;
+	}
+	#rechargeAmount {
+		margin-top:105px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:11px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:25px;
+	}
+	.RechargeCreditCardMoreQty {
+		margin-left:10px;
+		margin-right:10px;
+		margin-bottom:50px;
+		margin-top:100px;
+		height:130px;
+	}	
+	#rechargeCcTitle {
+		margin-top:20px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:18px;
+		font-weight:700;
+		color:#666666;
+	}
+	#rechargeCcValueTitle {
+		margin-top:-5px;
+		font-family: 'Ek Mukta', sans-serif;
+		padding-left:10px;
+		float:left;
+		color:#555555;
+		font-weight:bold;
+		font-size:20px;
+	}
+	.custom-activate-autorecharge {
+		margin-top:30px;
+		width:110px;
+		margin-right:30px;
+	}	
+
+	.autoRechargeWhenBalanceLowDiv {
+		padding-left:20px;
+		text-align:left;
+		margin-top:55px;
+		font-family: 'Ek Mukta', sans-serif;
+		font-size:20px;
+		font-weight:700;
+		color:#666666;
+		margin-bottom:20px;
+	}
+	.RechargeCreditCardMoreQty2 {
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:15px;
+	}	
+	.autoRechargeOnOffLbl {
+		margin-top:3px;
+		margin-right:6px;
+		font-size:26px;
+		padding-left:4px;
+		float:left;
+	}
+	.custom-dropdown-moreqty {
+		margin-top:38px;
+		height:48px;
+	}
+
+    .isTablet {
+        display: none;
+    }
+    
+
+
+	
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* loading end */
+
+/* Button Round */
+input#biground{
+width:100px; /*same as the height*/
+height:100px; /*same as the width*/
+background-image: -webkit-linear-gradient(top, #90C72A,  #438B00);
+background-image: -moz-linear-gradient(top, #90C72A,  #438B00);
+background-image: -ms-linear-gradient(top, #90C72A,  #438B00);
+background-image: -o-linear-gradient(top, #90C72A,  #438B00);	
+border:2px solid white; /*same colour as the background*/
+color:#fff;
+font-size:0.9em;
+text-transform:uppercase;
+cursor: pointer;
+font-weight: bold;
+word-wrap: break-word;
+/*set the border-radius at half the size of the width and height*/
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+/*give the button a small drop shadow*/
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+
+.round-button {
+	width:48%;
+}
+.round-button-circle {
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+	border:5px solid #1d7200;
+    overflow:hidden;
+    
+  
+	background-image: -webkit-linear-gradient(top, #90C72A,  #438B00);
+background-image: -moz-linear-gradient(top, #90C72A,  #438B00);
+background-image: -ms-linear-gradient(top, #90C72A,  #438B00);
+background-image: -o-linear-gradient(top, #90C72A,  #438B00);	
+border:2px solid white; /*same colour as the background*/
+
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+.round-button-circle:hover {
+background-color:#FFC612;
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFC612, endColorstr=#F77F00);
+background-image:-moz-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-o-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-ms-linear-gradient(top, #8BC329 25%, #3F6D1B 70%,#3F6D1B 50%);
+background-image:-webkit-gradient(linear, right top, right bottom, color-stop(25%,#8BC329), color-stop(60%,#3F6D1B),color-stop(50%,#3F6D1B));
+box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+-o-box-shadow: inset 0px 0px 10px 0px #295B00,0px 1px 0px rgba(0, 0, 0, 0.2);
+background-clip: padding-box;
+}
+.round-button a {
+    display:block;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+    text-transform:uppercase;
+	text-align:center;
+	color:white;
+    font-family: 'Ek Mukta', sans-serif;
+    font-size:2.0em;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    text-shadow: 0 -2px 0 #999;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+    margin: 200px 0 30px 0;
+    color: white;
+}
+
+/**
+ * Large Button Component
+ * http://components.onsenui.io/
+ */
+.button--large {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  padding: 4px 20px;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 1px none;
+  vertical-align: middle;
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 4px 20px;
+  display: block;
+  width: 100%;
+}
+.button--large:active {
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.6;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.button--large:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.button--large:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+
+.MySettingsGrayBox p {
+	padding-top:10px;
+	padding-left:5px;
+	color:#002CB1;
+	font-weight:bold;
+	font-size:14px;
+}
+
+.interTopUp_sub {
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:10px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-size:14px
+}
+
+#imgSelectedCountry {
+	margin-top:-20px;
+	width:20%;
+	float:right;
+	padding-right:48px;
+}	
+
+#imgSelectedOp {
+	margin-top:-15px;
+	width:20%;
+	float:right;
+	padding-right:48px;
+}
+
+#rechargeAmount {
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:11px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-si
+	ze:15px;
+}
+
+#rechargeCcTitle {
+	margin-top:-5px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-size:14px;
+	font-weight:700;
+	color:#666666;
+}
+
+#rechargeCcValueTitle {
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	padding-left:10px;
+	float:left;
+	color:#555555;
+	font-weight:bold;
+	font-size:15px;
+}
+
+.securePaymentDivCc1 {
+	width:94%;
+}
+
+.securePaymentDivCc2 {
+	border-radius:4px;
+	position:relative;
+	margin-bottom:10px;
+	margin-top:-10px;
+	height:27px;
+	background-color:#e1dfe2;
+}	
+
+.securePaymentDivCc2 img {
+	width:4%;
+	margin-top:5px;
+}		
+
+.autoRechargeWhenBalanceLowDiv {
+	padding-left:10px;
+	text-align:left;
+	margin-top:-10px;
+	font-family: 'Ek Mukta', sans-serif;
+	font-size:14px;
+	font-weight:700;
+	color:#666666;
+}
+
+.autoRechargeOnOffLbl {
+	margin-top:3px;
+	margin-right:6px;
+	font-size:22px;
+	padding-left:4px;
+	float:left;
+}
+
+.tripplePayTitleDiv {
+	margin-top:5px;
+}      
+      
+
+}
+
+

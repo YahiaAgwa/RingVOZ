@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://debug.monaca.mobi http://analytics.localytics.com;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>RingVoz</title>  
+  
+	<script src="components/loader.js"></script>
+	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="css/style.css">
+  
+    <script src="components/monaca-onsenui/js/onsenui.js"></script>   
+    <script src="lib/ringvoz/top_up.js"></script> 
+    <script src="lib/ringvoz/paymentMethods.js"></script>
+    <script src="lib/ringvoz/myFavoriteNumbers.js"></script>
+    <script src="lib/ringvoz/countries.js"></script>
+ 
+
+  <script>
+  var module = angular.module('app', ['onsen']);
+  
+  app.controller('DialogController', function($scope) {
+  	  
+  	  $scope.next = function() {
+  	   
+  	    ons.createDialog('dialog2.html').then(function(dialog) {
+  	      dialog.show();
+  	    });
+  	  
+  	  }
+  	  
+  	  $scope.show = function(dlg) {
+  	    ons.createDialog(dlg).then(function(dialog) {
+  	      dialog.show();
+  	    });
+  	  }
+  	});
+  
+  app.controller('NotificationController', function($scope) {
+  	  $scope.alert = function() {
+  	    ons.notification.alert({message: 'An error has occurred!'});
+  	  }
+  	  
+  	  $scope.confirm = function() {
+  	    ons.notification.confirm({
+  	      title: 'Ingresa su correo electronico',
+  	      //message: 'Provide your email address',
+  	      callback: function(idx) {
+  	        switch(idx) {
+  	          case 0:
+  	            ons.notification.alert({
+  	              message: 'Canceling registration...'
+  	            });
+  	            break;
+  	          case 1:
+  	            ons.notification.alert({
+  	              message: 'Proceeding Registration...'
+  	            });
+  	            break;
+  	        }
+  	        document.location='welcome.html';
+  	      }
+  	    });
+  	  }
+
+  	  
+  	});
+  </script>
+
+  <style>
+    .page--menu-page__background {
+      background-color: #333;
+    }
+    
+    .page--menu-page__content {
+      color: white;
+    }
+
+    .menu-close,
+    .menu-close > .toolbar-button {
+      color: #999;
+    }
+
+    .menu-list,
+    .menu-item:first-child,
+    .menu-item:last-child,
+    .menu-item {
+      background-color: transparent;
+      background-image: none !important;
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .menu-item {
+      padding: 0 0 0 20px;
+      line-height: 52px;
+      height: 52px;
+      text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+    }
+
+    .menu-item:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-notification {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      height: 16px;
+      line-height: 16px;
+      min-width: 16px;
+      font-weight: 600;
+    }
+
+    .bottom-menu-list,
+    .bottom-menu-item:first-child,
+    .bottom-menu-item:last-child,
+    .bottom-menu-item {
+      border-color: #393939;
+      background-color: transparent;
+      background-image: none !important;
+      color: #ccc;
+    }
+
+    .bottom-menu-item:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    
+	ons-dialog p {
+	  margin-left: 10px;
+	  margin-right: 10px;
+	}
+	
+	input {
+	  width: 100%;
+	}
+  </style>
+  
+</head>
+
+<body>    
+  <ons-page>
+<ons-toolbar>
+    <div class="center">
+    <span><img style="float:left;width:11%" src="images/ico_recarga_top-up.png"><label style="padding-left:50px;color:#0096DB;vertical-align:middle">Recarga Movil Top-Up</label></span>
+    </div>
+</ons-toolbar>
+
+<div class="RingVozWhitePage">
+
+ 
+    <ons-row>
+        <ons-col align="center">
+			<div style="text-align:center;background-color:whie;background-color:#0096DB;color:white">
+				<span>
+				  	<a href="#" class="myButton">&nbsp;<span><img src="images/icono_seleccionado.png" style="width:30px"><label>Activacion</label></a>
+				  	<a href="#" class="myButton">&nbsp;<span><img src="images/icono_seleccionado.png" style="width:30px"><label>Mi Cuenta</label></a>
+				</span>
+  			</div>
+        </ons-col>
+	</ons-row>
+ 	<ons-row>
+ 	
+        <ons-col align="left">
+  		<p style="padding-left:20px;color:#0096DB;font-weight:bold;font-size:12px">Nombre:
+		<br>
+        <input placeholder="Nombre" id="username" class="text-input" style="border-color:#0096DB;width:90%">
+      	</p>
+         </ons-col>
+      </ons-row>
+      
+ 	<ons-row>
+ 	
+        <ons-col align="left">
+  		<p style="padding-left:20px;color:#0096DB;font-weight:bold;font-size:12px">Apellidos:
+		<br>
+        <input placeholder="Username" id="username" class="text-input" style="border-color:#0096DB;width:90%">
+      	</p>
+         </ons-col>
+      </ons-row>     
+      
+      
+      
+      
+      
+ 	<ons-row>
+ 
+  
+     <ons-col align="center">
+      <p style="color:#0096DB;font-weight:bold;font-size:12px">Selecciona el tipo de Tarjeta:
+       <ons-button style="width:95%;border:none;" modifier="light" ng-controller="TopUpController" ng-click="show('registeredPaymentMethods.html')">
+            <img src="images/iconos_tarjetas_credito.png" style="width:95%">
+          </ons-button>
+          </p>
+        </ons-col>
+        
+         
+      </ons-row>
+  
+  	<ons-row>
+ 	
+        <ons-col align="left">
+  		<p style="padding-left:20px;color:#0096DB;font-weight:bold;font-size:12px">Numero de Tarjeta : Visa
+		<br>
+        <input placeholder="Numero de Tarjeta" id="username" class="text-input" style="border-color:#0096DB;width:90%">
+      	</p>
+         </ons-col>
+      </ons-row>
+      
+ 	<ons-row>
+ 	
+        <ons-col align="left">
+         <p style="padding-left:20px;color:#0096DB;font-weight:bold;font-size:12px">Fecha Expiracion:
+		<br>
+		<span>
+        <input placeholder="Month" id="username" class="text-input" style="border-color:#0096DB;width:44%">
+        <input placeholder="Year" id="username" class="text-input" style="border-color:#0096DB;width:45%">
+      	</span>
+      	</p>
+         </ons-col>
+      </ons-row>     
+      
+      	<ons-row>
+ 	
+        <ons-col align="left">
+        <p style="padding-left:20px;color:#0096DB;font-weight:bold;font-size:12px">Codigo CVV:
+		<br>
+        <input placeholder="Codigo CVV" id="username" class="text-input" style="border-color:#0096DB;width:90%">
+      	</p>
+         </ons-col>
+      </ons-row>     
+      
+      
+          <ons-row>
+        <ons-col align="center">
+        <p>
+          <ons-button modifier="normal" ng-controller="AddCreditCardController" ng-click="confirm()">
+            Continuar
+          </ons-button>
+          </p>
+        </ons-col>
+      </ons-row>
+
+    </ons-page>
+    
+    
+	
+</div>
+</body>
+</html>

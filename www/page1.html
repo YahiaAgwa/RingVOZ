@@ -1,0 +1,76 @@
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>   
+ <br>
+	  <!-- <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("home_opt1")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+	   
+	   
+	   
+	  
+		</center>
+	
+	    </div>-->
+		
+ 	<div style="text-align: center">
+
+ 	<ons-row>
+     	<ons-col align="left">
+		<br><br>
+		<div class="TopUpConfirmSelectedOperatorCountry" style="width:95%">
+			<br>
+			<center>
+			<div class="interTopUpTitleTxt">{{lg.get("lbl_selectCountryOpTitle1")}}<br>{{lg.get("lbl_selectCountryOpTitle2")}}</div> 
+			</center>
+     		<br>
+
+	     	<p style="padding-left:10px;">
+			
+
+         <select class="custom-dropdown-country" 
+		    ng-change="selectCountryAction()"
+		    ng-model="myCountry"
+		    ng-options="value.name for value in allCountries">
+			<option name="" value="">{{lg.get("lbl_selectCountry")}}</option>
+		</select>
+	      	</p>
+			
+			<p style="padding-left:10px;">
+			<br>
+			 <select ng-disabled="opDisabled" class="custom-dropdown-operator" 
+		    ng-change="selectOperatorAction()"
+		    ng-model="myOperator"
+		    ng-options="value.name for value in operators">
+			<option name="" value="">{{lg.get("lbl_selectOperator")}}</option>
+		</select>
+		<br><br>
+		</div>
+        </ons-col>
+    </ons-row> 
+        
+  	<ons-row>
+		<ons-col align="center">
+			<br><br>
+			<p>
+				<ons-button class="button-orange-new" style="width:95%" modifier="normal" onclick="document.location = 'top_up_options.html'">
+				  {{lg.get("btn_back")}}
+				</ons-button>
+			</p>
+  		</ons-col>
+	</ons-row>
+  </div>   
+
+  </ons-page>

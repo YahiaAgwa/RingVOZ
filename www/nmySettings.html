@@ -1,0 +1,97 @@
+  <ons-page>
+    <ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+	<br>
+	   <!--<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <label id="topBlueBarLbl">{{lg.get("lbl_configuration")}}</label>
+	   </div>
+	  
+		</center>
+	
+	    </div>-->
+		
+  <div class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 
+    
+ 	<ons-row>
+ 	
+        <ons-col align="left">
+		<br>
+		 <div class="MySettingsGrayBox">
+
+  		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_accNbr")}}:</label>
+	
+        <input ng-model="rechargeDetails.verifiedNumber" ng-bind="rechargeDetails.verifiedNumber()" ng-model-options="{ getterSetter: true }" disabled="disabled" class="text-input" style="border-color:#002CB1;width:99%" />
+      	</p>
+		
+       
+		
+ 		<p>
+		<label class="accDetailsSettings">{{lg.get("lbl_nameLastName")}}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<span>
+        <input ng-model="rechargeDetails.userName" ng-bind="rechargeDetails.userName()" ng-model-options="{ getterSetter: true }" placeholder="Nombre" id="firstname" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+      
+        <input ng-model="rechargeDetails.userLastName" ng-bind="rechargeDetails.userLastName()" ng-model-options="{ getterSetter: true }" placeholder="Apellidos" id="lastname" class="text-input" style="color:#444;border-color:#0082fe;width:49%">
+		</span>
+      	</p>		
+		
+		
+		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_address")}}:</label>
+		
+        <input type="text" ng-model="rechargeDetails.userAddress" ng-bind="rechargeDetails.userAddress()" ng-model-options="{ getterSetter: true }" placeholder='{{lg.get("lbl_address")}}' class="text-input" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+		
+		
+				<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_city")}}:</label>
+        <input type="text" ng-model="rechargeDetails.userCity" ng-bind="rechargeDetails.userCity()" ng-model-options="{ getterSetter: true }" placeholder="Cuidad" class="text-input" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+		
+		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_state")}}:</label>
+        <input type="text" ng-model="rechargeDetails.userState" ng-bind="rechargeDetails.userState()" ng-model-options="{ getterSetter: true }" placeholder="Estado" class="text-input" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+		
+		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_country")}}:</label>
+        <input type="text" ng-model="rechargeDetails.userCountry" ng-bind="rechargeDetails.userCountry()" ng-model-options="{ getterSetter: true }" placeholder="País" class="text-input" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+
+		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_postalCode")}}:</label>
+        <input type="text" ng-model="rechargeDetails.userZipCode" ng-bind="rechargeDetails.userZipCode()" ng-model-options="{ getterSetter: true }" placeholder="Código Postal" class="text-input" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+		
+		<p>
+  		<label class="accDetailsSettings">{{lg.get("lbl_email")}}:</label>
+        <input type="text" ng-model="rechargeDetails.email" ng-bind="rechargeDetails.email()" ng-model-options="{ getterSetter: true }" class="text-input" placeholder="Correo Electrónico" style="color:#444;border-color:#0082fe;width:99%" />
+      	</p>
+		<p>
+		<center>
+		      <ons-button class="button-green-new" style="width:45%" modifier="normal" ng-click="updateUserAccount('',true)">
+				  {{lg.get("btn_save")}}
+				</ons-button>	
+				<center>
+		</p>
+		
+		 
+      	</div>
+		
+		<br><br><br><br><br><br><br><br><br>
+
+         </ons-col>
+ 	  </ons-row>
+</div>
+    </ons-page>

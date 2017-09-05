@@ -1,0 +1,95 @@
+  <ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+ <br>
+	  <!-- <div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	    <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("lbl_accountRecharge")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+
+		</center>
+	
+	    </div>-->
+		
+ 	<div style="text-align: center">
+
+  
+	<center>
+<div>
+<img src="images/tripplePay.png" alt="" style="float:left;margin-bottom:20px;padding-top:10px;width:34%;padding-left:12px;"><br>
+<label class="tripplePayTitleTxt1">{{lg.get("lbl_rechargeWithPinfromShop")}}</label>
+<label class="tripplePayTitleTxt2">{{lg.get("lbl_rechargeWithPinfromShop2")}}</label>  
+</div>
+</center>
+<br>
+<br><br>
+   <div id="rechargeAmount">
+			<label>{{lg.get("lbl_rechargeValue")}}:</label>
+     	</div>
+ <br>  
+ <div class="RechargeCreditCardMoreQty" style="text-align:left">
+ <span><img style="float:left;width:17%;padding-left:5px;padding-top:5px;" src="{{rechargeAmount10src}}" ng-click="selectPinAmountRechargeFromImg(10,'images/10selected.png')" >
+ <img style="float:left;width:17%;padding-left:5px;padding-top:5px;" src="{{rechargeAmount15src}}" ng-click="selectPinAmountRechargeFromImg(15,'images/15selected.png')">
+ <img style="float:left;width:17%;padding-left:5px;padding-top:5px;" src="{{rechargeAmount20src}}" ng-click="selectPinAmountRechargeFromImg(20,'images/20selected.png')"> 
+ 
+		<select class="custom-dropdown-moreqty" style="float:right"  
+		    ng-change="selectPinAmountRechargeFromList()"
+		    ng-model="myPinRechargeAmount"
+		    ng-options='value.name for value in pinRechargeAmounts'>
+		</select></span>
+ 
+			
+  <br>
+  </div>
+  <!-- ng-options='value.INFO3 as (" ************* " + value.INFO3) for value in userCreditCardsList'> -->
+  <p style="margin-top:6px;padding-left:10px">	
+		<span>
+		
+		<input ng-model="rechargeDetails.tripplePayPin" ng-model-options="{ getterSetter: true }" class="text-input" style="text-align:center;background:url(images/orangePIN.png) no-repeat left center;margin-top:8px;float:left;padding-left:20px;color:#444;border-color:#0082fe;width:40%">		
+ 
+        <ons-button class="button-orange-newtransac" style="padding-top:5px;height:38px;margin-top:6px;width:45%;" modifier="normal" ng-click="validatePinBalance()">
+			 {{lg.get("btn_validatePin")}}
+		</ons-button>
+		</span>
+		
+  </p>
+ <p>
+ <div class="balance-text">{{lg.get("lbl_pinBalance")}}:&nbsp;<label class="balance-number">$</label><span><label class="balance-number" ng-model="rechargeDetails.pinBalance" ng-bind="rechargeDetails.pinBalance()" ng-model-options="{ getterSetter: true }"></label></span></div>  
+ </p>
+  
+		<p>
+		           <ons-button class="button-orange-new" style="width:41%;font-size:20px" modifier="normal" onclick="myNavigator.popPage()">
+            {{lg.get("btn_back")}}
+          </ons-button>
+			<ons-button class="button-green-new" style="width:53%;font-size:20px" modifier="normal" ng-click="displayPinRechargeTransacDetails()">
+			  {{lg.get("btn_rechargeNow")}}
+			</ons-button>
+			</p>
+			
+<p>
+<div class="box-home-enable">
+<a href="#" onclick="window.open('http://www.ringvoz.com/store-locator/mobile/', '_system');">
+<img align="left" src="images/pinMap.png" alt="Localiza Aquí" onclick="window.open('http://www.ringvoz.com/store-locator/mobile/', '_system');" style="margin-top:15px;margin-right:5px">
+<div class="box-home-content">
+<label class="locatorTxt" style="font-weight:normal">{{lg.get("lbl_ifYouDontHaveFavoriteShop")}}</label>
+<label class="locatorTxt" style="font-weight:bold">{{lg.get("lbl_ifYouDontHaveFavoriteShop2")}} </label>
+<label class="locatorTxt" style="font-weight:normal">{{lg.get("lbl_ifYouDontHaveFavoriteShop3")}} </label>
+<label class="locatorTxt" style="font-weight:bold">{{lg.get("lbl_ifYouDontHaveFavoriteShop4")}} </label>  
+</div>
+</a>
+</div>
+</p>			
+	    </div>
+
+  </ons-page>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>RingVoz</title>  
+   
+   	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="css/style.css">
+   <script src="components/loader.js"></script>
+   <script src="spinnerplugin.js"></script>   
+   <script src="telephonenumber.js"></script>
+   
+   <script src="lib/ringvoz/RingVozAuth.js"></script>
+   <script src="localytics.js"></script> 
+   <script>
+        var networkState;
+		var states = {};
+        var localyticsSession; 
+		
+		
+
+        function checkConnection() {
+			networkState = navigator.network.connection.type;
+			
+			states[Connection.UNKNOWN]  = 'Unknown connection';
+			states[Connection.ETHERNET] = 'Ethernet connection';
+			states[Connection.WIFI]     = 'WiFi connection';
+			states[Connection.CELL_2G]  = 'Cell 2G connection';
+			states[Connection.CELL_3G]  = 'Cell 3G connection';
+			states[Connection.CELL_4G]  = 'Cell 4G connection';
+			states[Connection.CELL]     = 'Cell generic connection';
+			states[Connection.NONE]     = 'No network connection';
+		}
+        
+        function onLoad() {
+			document.addEventListener("deviceready", onDeviceReady, false);
+		}
+        
+        // PhoneGap event handler
+       
+		function onOffline() {
+			document.location = 'error_PreInstallNoNetwork.html';
+		}
+		
+        function onDeviceReady() {
+			document.addEventListener("offline", onOffline, false);
+			
+            checkConnection();
+			localyticsSession = LocalyticsSession("4c8ce55900474975b514214-0108efd6-9cd4-11e4-a6f7-005cf8cbabd8");
+			localyticsSession.open();
+			localyticsSession.upload();
+			
+            if (states[networkState] == 'No network connection') {
+    			localyticsSession.tagEvent("TopUp_NoNetworkConnection");
+    			document.location = 'error_PreInstallNoNetwork.html';
+    		} 
+        }
+    </script>
+  
+
+<style>
+  
+    .page--menu-page__background {
+      background-color: #333;
+    }
+    
+    .page--menu-page__content {
+      color: white;
+    }
+
+    .menu-close,
+    .menu-close > .toolbar-button {
+      color: #999;
+    }
+
+    .menu-list,
+    .menu-item:first-child,
+    .menu-item:last-child,
+    .menu-item {
+      background-color: transparent;
+      background-image: none !important;
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .menu-item {
+      padding: 0 0 0 20px;
+      line-height: 52px;
+      height: 52px;
+      text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+    }
+
+    .menu-item:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-notification {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      height: 16px;
+      line-height: 16px;
+      min-width: 16px;
+      font-weight: 600;
+    }
+
+    .bottom-menu-list,
+    .bottom-menu-item:first-child,
+    .bottom-menu-item:last-child,
+    .bottom-menu-item {
+      border-color: #393939;
+      background-color: transparent;
+      background-image: none !important;
+      color: #ccc;
+    }
+
+    .bottom-menu-item:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    
+	ons-dialog p {
+	  margin-left: 10px;
+	  margin-right: 10px;
+	}
+	
+	input {
+	  width: 100%;
+	}
+	
+	
+
+
+.slide-animate-container {
+  position:relative;
+  background:white;
+  border:1px solid black;
+  height:40px;
+  overflow:hidden;
+}
+
+.slide-animate {
+  padding:10px;
+}
+
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:block;
+  padding:10px;
+}
+
+.slide-animate.ng-enter {
+  top:-50px;
+}
+.slide-animate.ng-enter.ng-enter-active {
+  top:0;
+}
+
+.slide-animate.ng-leave {
+  top:0;
+}
+.slide-animate.ng-leave.ng-leave-active {
+  top:50px;
+}	
+	
+	
+  </style>
+  
+</head>
+
+<body onload="onLoad()">
+  <div class="RingVozLetsBegin" ng-controller="rv_auth">
+  <div class="topbar"></div>
+  <img src="images/mascota_vamos_empesar.png" alt="" style="width:68%">
+  
+ <div class="welcomingTextMain">{{lg.get("lbl_letsBegin")}}</div>
+ <div class="welcomingTextHighlight" style="font-weight: 900;">{{lg.get("lbl_verifyCelphone")}}</div>
+ <div class="welcomingTextHighlight" style="font-weight: 900;">{{lg.get("lbl_doClick")}}</div>
+
+ 
+ <p>
+ 
+  <ons-button ng-click="smsRegistration()" style="width:100%;background:transparent;">
+            SMS Registration
+          </ons-button>
+ </p>
+
+<div class="explanationLightBlue" style="color:#878787">{{lg.get("lbl_doingClickAcceptTerms")}}</div>
+<div class="explanationLightBlue" style="color:#005CFF"><a href="#" onclick="window.open('https://www.ringvoz.com/es/terminos-y-condiciones.html', '_system');" style="color:#005CFF">Términos y Condiciones</a></div>
+<div class="explanationLightBlue" style="color:#AAAAAA">{{lg.get("lbl_sendWelcomeSMS")}}</div>   
+<div class="explanationLightBlue" style="color:#AAAAAA">{{lg.get("localFeesAply")}}</div>   
+</div>
+
+	<ons-template id="getNbrForSMSRegistration.html" ng-controller="rv_auth">
+	  <ons-dialog var="dialog" cancelable style="width:90%">
+	
+		<p>
+			<span style="font-family: 'Ek Mukta', sans-serif;"><label ng-controller="rv_auth" style="font-family: 'Ek Mukta', sans-serif;float:left;color:#545454;font-weight:bold">cellphone number for account association</label><img src="images/x.png" alt="" ng-controller="rv_auth" ng-click="closeInputNbrDlg()" style="padding-top:5px;width:7%;float:right"></span>
+		</p>
+	    <p>&nbsp;</p>
+	      <p>
+	        <input type="number" style="color:#AAAAAA;border-color:#0259ff" placeholder="Número celular" maxlength="11" ng-controller="rv_auth" ng-bind="primaryNumberInfo.phoneNumber()" ng-model="primaryNumberInfo.phoneNumber" ng-model-options="{ getterSetter: true }" class="text-input">
+	      </p>
+	    
+	      
+	    
+	      <p>
+	        <ons-button modifier="normal" class="button-green-new" style="text-transform:normal;width:100%;text-align:center" ng-controller="rv_auth" ng-click="sendSmsCode()">Send my SMS Code</ons-button>
+	      </p>
+	
+	  </ons-dialog> 
+	</ons-template>	
+</body>
+</html>

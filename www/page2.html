@@ -1,0 +1,126 @@
+<ons-page class="RingVozWhitePage" ng-controller="InterTopUpController">
+ 	<ons-toolbar>
+       <div id="tb" class="center" >
+       <img id="topPet" class="topPet" align="left" src="images/mascota.png" alt="" ng-click="promoSequence()" />
+       <div id="praux" class="badge"></div>
+	   <img id="topOrangeBarImg" class="topOrangeBarImg" align="center" src="images/logo_ringvoz_blanco{{lg.get('lbl_lgTag')}}.png" alt="" />
+       <div id="topbal" class="topbal" align="rigth"><img class="balimg" ng-src="{{rechargeDetails.accountBalanceLed()}}" alt=""/>
+            <label class="titlab" ng-model="rechargeDetails.accountBalance" ng-bind="rechargeDetails.accountBalance()" ng-model-options="{ getterSetter: true }" id="accBalance"></label></div>
+	   </div>
+	</ons-toolbar>
+<br>
+<!--	<div class="center" style="text-transform:normal;">  
+	   <center>
+	   <br>
+ 	   <div id="topBlueBarId" class="TopBlueBarTitle">
+		 <img id="topBlueBarLeftIcon" align="left" src="images/icono_blanco_recarga_top-up.png" alt=""/>
+		 <label id="topBlueBarLbl">{{lg.get("home_opt1")}}</label>
+		 <img id="topBlueBarRightIcon" align="right" ng-click="cancelRecharge()" src="images/x_blanca.png" alt=""/>
+	   </div>
+		</center>
+	</div>-->
+<div style="text-align: center">
+ <ons-row>
+     <ons-col align="center">
+     	<p class="interTopUp_sub">
+     	{{lg.get("lbl_interTopUp_sub")}}
+     	</p>
+        <br><br>
+        <div class="tabcountry">
+        <table cols="3" border="0" cellpadding="0" cellspacing="3" width="100%">
+        <tr><td width="66%" height="100%">
+        <label class="titleselect optval">{{lg.get("lbl_selectedCountry")}}</label><br>
+        <label class="titleselect" ng-bind="rechargeDetails.country()"></label>
+        </td><td width="20%" height="100%" valign="middle">
+        <img class="cntryimg" ng-src="{{sCountryImg}}" err-src="images/Top-up-Images/countries/blank.png">
+        </td><td width="14%" height="100%" valign="middle">
+        </td></tr>
+        </table>
+        </div> 
+        <div class="tabcountry">
+        <table cols="3" border="0" cellpadding="0" cellspacing="3" width="100%">
+        <tr><td width="66%" height="100%">
+        <label class="titleselect optval">{{lg.get("lbl_selectedOperator")}}</label><br>
+        <label class="titleselect" ng-bind="rechargeDetails.operator()"></label>
+        </td><td width="20%" height="100%" valign="middle">
+        <img class="cntryimg2" ng-src="{{sOperatorImg}}" err-src="images/Top-up-Images/countries/blank.png">
+        </td><td width="14%" height="100%" valign="middle">
+        <label class="opepromot" ng-bind="rechargeDetails.promoText()"></label>
+        </td></tr>
+        </table>
+        </div>
+     	<p>
+		<select id="interTopUpAmount" class="custom-dropdown-amount" 
+		    ng-change="selectAmountAction()"
+		    ng-model="myAmount" 
+		    ng-options='value.name as ("$ " + (value.name)) for value in rechargeDetails.rechargeAmountsOpt()'>
+			<option name="" value="">{{lg.get("lbl_selectValue")}}</option>
+		</select>
+		<label class="rechargeCurrencyTxt" ng-bind="rechargeDetails.rechargeAmountCurrencyValue()" id="currencyval"></label>
+		</p>
+        <span>
+  		<p id="destinationNumberInputDesc">{{lg.get("lbl_cellNumberToRecharge")}}
+		</p>
+		<p style="padding-left:15px;color:#555555;font-weight:bold;">
+        
+        <input type="text" ng-disabled="destNbrDisabled" ng-click="gotoAnchor(1)" ng-model="rechargeDetails.destinationNumber" ng-model-options="{ getterSetter: true }" id="destinationNumber" class="text-input" style="float:left;margin-top:-15px;width:60%;font-weight: bold;font-size:18px">
+        <img style="position:relative;display:inline-block;width:14%;left:10px;top:24px;" src="images/mynumbers.png" ng-click="showPrevsPopup()" >
+        <!-- <ons-button id="prevnums" class="button-green-new" style="display:inline-block;position:relative;width:25%;font-size:12px;padding-left:15px;white-space:normal;line-height:20px;top:25px;" modifier="normal"  ng-click="showPrevsPopup()">{{lg.get("lbl_recentnums")}}</ons-button>-->
+        <label style="padding-left:7px;padding-bottom:1px;float:left;color:#BABABA;font-size:12px;font-weight:bold;" ng-bind="rechargeDetails.destNbrPattern()"></label>
+        </p>
+        </span>
+        <span>
+        <p style="padding-left:15px;padding-top:15px;color:#555555;font-weight:bold;">
+            <!--<img style="display:inline-block;width:14%;padding-left:15px;top:25px;" src="images/masblanco.png" ng-click="addRowToOrder()" >-->
+            <ons-button id="addtoorder" class="button-blue-new" style="width:50%;font-size:18px" modifier="normal"  ng-click="rechargeDetails.validateNbr()">{{lg.get("btn_addtoorder")}}</ons-button>
+        </p>    
+        </span>
+        <span>
+        <p style="padding-left:15px;color:#555555;font-weight:bold;"><center>
+            <table style="font-weight:bold;">
+              <!--<thead>
+                <tr>
+                  <th width="100%">Order details</th>
+                </tr>
+              </thead>-->
+              <tbody>
+                <tr ng-repeat="rowContent in rechargeDetails.orderRows()">
+                  <td style="padding-left:10px;padding-right:10px;">{{rowContent.number}}</td><td style="padding-left:10px;padding-right:10px;">{{rowContent.amusd}}</td><td style="padding-left:10px;padding-right:10px;color:#FB700A;">{{rowContent.amval}}</td><td><img width="24" src="images/minus.png" ng-click="removeOrderRow(rowContent)" ></td>
+                </tr>
+              </tbody>
+            </table>    </center>
+        </p>    
+        </span>
+	    <center>
+			<select style="margin-top:8px;margin-bottom:5px;" class="{{ccClass}}"  
+				ng-change="selectTopUpCreditCard()"
+				ng-model="choosenCard"
+				ng-options='value.INFO3 for value in userCreditCardsList'>
+			</select>
+		</center>
+        <p>
+          <ons-button class="button-orange-new" style="width:42%;font-size:20px" modifier="normal" ng-click="clearOrder();">
+            {{lg.get("btn_back")}}
+          </ons-button>
+          <ons-button id="torech" class="button-green-new" style="width:52%;font-size:20px" modifier="normal"  ng-click="rechargeDetails.previewOrder()">{{lg.get("btn_rechargeNow")}}</ons-button>
+		</p>
+        <center>
+        	<div id="anchor1" style="height:5px">&nbsp;</div>
+            <div style="width:94%">
+            <div style="border-radius:4px;position:relative;margin-bottom:5px;margin-top:5px;height:27px;background-color:#e1dfe2">
+        	<img src="images/lockIcon.png" style="margin-top:5px;width:4%">
+        	<label class="secureTransac ng-binding" style="vertical-align: middle;font-size:9px;font-weight:700;color:#545454">{{lg.get("lbl_secureRecharge")}}</label>
+        	</div>
+        	</div>
+        </center>
+        </ons-col>
+      </ons-row>  
+	  <ons-row>
+        <ons-col align="left">
+  		<p style="color:#002CB1;font-weight:bold;font-size:11px">
+		<center><div class="explanationDarkBlueBold" style="padding-top:10px"><a ng-href="#" onclick="window.open('https://www.ringvoz.com/es/terminos-y-condiciones.html', '_system');">{{lg.get("lbl_termsAndContions")}}</a></div></center>
+  		</p>
+         </ons-col>
+      </ons-row>  
+</div>
+</ons-page>
